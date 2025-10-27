@@ -3,67 +3,338 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AWS CLF‑C02 — Losowe 20 (bez powtórek)</title>
+  <title>AWS CLF-C02 — Quiz</title>
   <style>
-    :root{--bg:#0b0f19;--card:#11182a;--muted:#8ea1b5;--text:#e8eef6;--accent:#4ea8ff;--ok:#28c76f;--bad:#ff5d5d;--chip:#1a2440}
-    *{box-sizing:border-box} body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#0b0f19,#0e1324);} 
-    .wrap{max-width:980px;margin:0 auto;padding:24px}
-    .card{background:var(--card);border:1px solid #1e2741;border-radius:18px;padding:22px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
-    h1{color:var(--text);font-weight:800;margin:.2rem 0 1rem;font-size:1.6rem}
-    .sub{color:var(--muted);font-size:.95rem;margin-top:-.3rem}
-    .qnum{display:flex;align-items:center;gap:10px;margin:.25rem 0 1rem;color:var(--muted)}
-    .chip{background:var(--chip);color:#c9d6ea;border:1px solid #2a355c;border-radius:999px;padding:6px 10px;font-size:.85rem}
-    .question{color:var(--text);font-size:1.15rem;line-height:1.45}
-    .options{display:grid;grid-template-columns:1fr;gap:10px;margin:18px 0}
-    .opt{display:flex;align-items:stretch;border:1px solid #273059;background:#0f162a;border-radius:14px;overflow:hidden}
+    :root {
+      --bg:#0b0f19;
+      --card:#11182a;
+      --muted:#8ea1b5;
+      --text:#e8eef6;
+      --accent:#4ea8ff;
+      --ok:#28c76f;
+      --bad:#ff5d5d;
+      --chip:#1a2440
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      background:linear-gradient(180deg,#0b0f19,#0e1324);
+      color:var(--text);
+    }
+    .wrap{
+      max-width:980px;
+      margin:0 auto;
+      padding:24px;
+      display:flex;
+      flex-direction:column;
+      gap:18px
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid #1e2741;
+      border-radius:18px;
+      padding:22px;
+      box-shadow:0 10px 30px rgba(0,0,0,.35)
+    }
+
+    h1{
+      color:var(--text);
+      font-weight:800;
+      margin:.2rem 0 1rem;
+      font-size:1.6rem
+    }
+    .sub{
+      color:var(--muted);
+      font-size:.95rem;
+      margin-top:-.3rem;
+      line-height:1.4
+    }
+
+    .row-inline{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:flex-end;
+      gap:12px;
+      margin-top:16px;
+    }
+
+    .field{
+      display:flex;
+      flex-direction:column;
+      min-width:200px;
+    }
+
+    .field-label{
+      font-size:.8rem;
+      font-weight:600;
+      color:var(--muted);
+      margin-bottom:4px;
+      display:block;
+    }
+
+    select{
+      appearance:none;
+      background:#0f162a;
+      border:1px solid #2a355c;
+      border-radius:10px;
+      padding:10px 12px;
+      color:#cfe2ff;
+      font-size:.9rem;
+      line-height:1.3;
+      cursor:pointer;
+      min-width:120px;
+    }
+
+    .load-btn{
+      background:var(--accent);
+      color:#031227;
+      border:0;
+      border-radius:12px;
+      padding:12px 16px;
+      font-weight:700;
+      cursor:pointer;
+      font-size:.9rem;
+      white-space:nowrap;
+    }
+
+    .hint{
+      font-size:.8rem;
+      color:var(--muted);
+      line-height:1.4;
+    }
+
+    .qnum{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin:.25rem 0 1rem;
+      color:var(--muted)
+    }
+    .chip{
+      background:var(--chip);
+      color:#c9d6ea;
+      border:1px solid #2a355c;
+      border-radius:999px;
+      padding:6px 10px;
+      font-size:.85rem
+    }
+    .question{
+      color:var(--text);
+      font-size:1.15rem;
+      line-height:1.45;
+      min-height:2.5em
+    }
+    .options{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:10px;
+      margin:18px 0
+    }
+    .opt{
+      display:flex;
+      align-items:stretch;
+      border:1px solid #273059;
+      background:#0f162a;
+      border-radius:14px;
+      overflow:hidden
+    }
     .opt input{display:none}
-    .opt label{display:flex;gap:12px;align-items:center;width:100%;padding:14px 14px;cursor:pointer;color:#dfe7f7}
-    .letter{min-width:34px;height:34px;border-radius:8px;display:grid;place-items:center;background:#1a2440;border:1px solid #2c3a66;color:#a9bee0;font-weight:700}
-    .opt.checked{border-color:var(--accent);box-shadow:0 0 0 2px rgba(78,168,255,.25) inset}
-    .opt.correct{border-color:var(--ok)} .opt.wrong{border-color:var(--bad)}
-    .actions{display:flex;gap:10px;align-items:center}
-    button{border:0;border-radius:12px;padding:12px 16px;font-weight:700;cursor:pointer}
-    .primary{background:var(--accent);color:#031227} .ghost{background:#131b31;color:#cfe2ff;border:1px solid #2a355c}
-    .primary[disabled]{opacity:.6;cursor:not-allowed}
-    .feedback{margin:12px 2px 0;font-size:.95rem}
-    .ok{color:var(--ok)} .bad{color:var(--bad)}
-    .progress{height:10px;background:#0e1426;border:1px solid #22305b;border-radius:999px;overflow:hidden;margin:12px 0 18px}
-    .bar{height:100%;background:linear-gradient(90deg,#4ea8ff,#6ee7ff)}
-    .footer{display:flex;justify-content:space-between;align-items:center;margin-top:10px;color:var(--muted);font-size:.92rem}
-    .pill{padding:6px 10px;border-radius:999px;border:1px solid #2a355c;background:#121a30;color:#cfe2ff}
-    .score{font-size:1.6rem;font-weight:800;color:var(--text)}
-    .review{margin-top:16px}
-    details{background:#0f162a;border:1px solid #26335e;border-radius:12px;padding:12px 14px;margin:10px 0}
-    summary{cursor:pointer;color:#cfe2ff}
+    .opt label{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      width:100%;
+      padding:14px 14px;
+      cursor:pointer;
+      color:#dfe7f7
+    }
+    .letter{
+      min-width:34px;
+      height:34px;
+      border-radius:8px;
+      display:grid;
+      place-items:center;
+      background:#1a2440;
+      border:1px solid #2c3a66;
+      color:#a9bee0;
+      font-weight:700
+    }
+    .opt.checked{
+      border-color:var(--accent);
+      box-shadow:0 0 0 2px rgba(78,168,255,.25) inset
+    }
+    .opt.correct{border-color:var(--ok)}
+    .opt.wrong{border-color:var(--bad)}
+
+    .actions{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      flex-wrap:wrap
+    }
+    button{
+      border:0;
+      border-radius:12px;
+      padding:12px 16px;
+      font-weight:700;
+      cursor:pointer;
+      font-size:.9rem
+    }
+    .primary{
+      background:var(--accent);
+      color:#031227
+    }
+    .ghost{
+      background:#131b31;
+      color:#cfe2ff;
+      border:1px solid #2a355c
+    }
+    .primary[disabled]{
+      opacity:.6;
+      cursor:not-allowed
+    }
+
+    .feedback{
+      min-height:1.4em;
+      margin:12px 2px 0;
+      font-size:.95rem
+    }
+    .ok{color:var(--ok)}
+    .bad{color:var(--bad)}
+
+    .progress{
+      height:10px;
+      background:#0e1426;
+      border:1px solid #22305b;
+      border-radius:999px;
+      overflow:hidden;
+      margin:12px 0 18px
+    }
+    .bar{
+      height:100%;
+      background:linear-gradient(90deg,#4ea8ff,#6ee7ff)
+    }
+
+    .footer{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-top:10px;
+      color:var(--muted);
+      font-size:.92rem;
+      flex-wrap:wrap;
+      row-gap:8px
+    }
+    .pill{
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid #2a355c;
+      background:#121a30;
+      color:#cfe2ff
+    }
+
+    .score{
+      font-size:1.6rem;
+      font-weight:800;
+      color:var(--text)
+    }
+    .review{
+      margin-top:16px
+    }
+    details{
+      background:#0f162a;
+      border:1px solid #26335e;
+      border-radius:12px;
+      padding:12px 14px;
+      margin:10px 0
+    }
+    summary{
+      cursor:pointer;
+      color:#cfe2ff
+    }
     .muted{color:#9db2cf}
   </style>
 </head>
 <body>
   <div class="wrap">
-    <div class="card">
-      <h1>AWS CLF‑C02 — Losowe 20 (bez powtórek)</h1>
-      <div class="sub">Zestaw budowany z Practice Exam 2 i 3. Automatycznie <b>wyklucza pytania</b> użyte w poprzednim quizie (Practice Exam 1 — 20 losowych).</div>
+
+    <!-- PANEL WYBORU BAZY PYTAŃ / KONFIGURACJI STARTU -->
+    <div class="card" id="datasetCard">
+      <h1>Wybierz zestaw pytań</h1>
+      <div class="sub">
+        1. Wybierz plik z pytaniami z folderu <b>/datasets</b><br/>
+        2. Wybierz ile pytań chcesz w tym quizie<br/>
+        3. Kliknij „Załaduj bazę pytań ▶”<br/>
+        Po załadowaniu ten panel zniknie, a pojawi się quiz.
+      </div>
+
+      <div class="row-inline">
+        <div class="field">
+          <label for="datasetSelect" class="field-label">Zestaw pytań</label>
+          <select id="datasetSelect">
+            <!-- opcje dodamy dynamicznie -->
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="questionCountSelect" class="field-label">Ile pytań?</label>
+          <select id="questionCountSelect">
+            <option value="10">10 pytań</option>
+            <option value="20" selected>20 pytań</option>
+            <option value="30">30 pytań</option>
+            <option value="40">40 pytań</option>
+            <option value="50">50 pytań</option>
+          </select>
+        </div>
+
+        <button id="loadBtn" class="load-btn">Załaduj bazę pytań ▶</button>
+      </div>
+
+      <div class="hint" style="margin-top:8px">
+        Każdy plik JSON w /datasets powinien mieć strukturę:
+        <code>{ question, options {A,B,...}, correct_answers [..] }</code>
+      </div>
+
+      <div class="hint" id="loadStatus" style="margin-top:4px"></div>
+    </div>
+
+    <!-- KARTA QUIZU (ukryta dopóki nie wystartujemy) -->
+    <div class="card" id="quizCard" style="display:none;">
+      <h1>AWS CLF-C02 — Quiz</h1>
+      <div class="sub">
+        Masz losowy zestaw pytań na podstawie wybranego pliku i liczby pytań.<br/>
+        Restart odświeża quiz w ramach tej samej puli, bez ponownego wyboru pliku.
+      </div>
+
       <div class="progress"><div id="bar" class="bar" style="width:0%"></div></div>
+
       <div class="qnum">
         <span class="chip" id="counter">Pytanie 1 / 20</span>
         <span class="chip" id="multiFlag" style="display:none">Wybierz WIELE</span>
         <span class="chip" id="score">0 poprawnych</span>
       </div>
+
       <div id="question" class="question"></div>
       <div id="options" class="options"></div>
+
       <div class="actions">
         <button id="submit" class="primary" disabled>Sprawdź odpowiedź</button>
         <button id="next" class="ghost" style="display:none">Następne ▶</button>
         <button id="restart" class="ghost" style="margin-left:auto">⟲ Restart</button>
       </div>
+
       <div id="feedback" class="feedback"></div>
+
       <div class="footer">
         <span class="pill">Tryb: natychmiastowa weryfikacja</span>
         <span class="pill">Zaznacz odpowiedź i kliknij „Sprawdź”</span>
       </div>
     </div>
 
-    <div id="result" class="card" style="display:none; margin-top:18px">
+    <!-- WYNIK -->
+    <div id="result" class="card" style="display:none;">
       <div class="score" id="finalScore"></div>
       <div class="sub" id="finalSub"></div>
       <div class="review" id="review"></div>
@@ -71,143 +342,351 @@
   </div>
 
   <script>
-    // 1) Pytania wykorzystane w poprzednim quizie (Practice Exam 1 – 20 losowych)
-    const EXCLUDE = [
-      'AWS allows users to manage their resources using a web based user interface. What is the name of this interface?',
-      'Which of the following is an example of horizontal scaling in the AWS Cloud?',
-      'You have noticed that several critical Amazon EC2 instances have been terminated. Which of the following AWS services would help you determine who took this action?',
-      'Which of the below options are related to the reliability of AWS? (Choose TWO)',
-      'Which statement is true regarding the AWS Shared Responsibility Model?',
-      'You have set up consolidated billing for several AWS accounts. One of the accounts has purchased a number of reserved instances for 3 years. Which of the following is true regarding this scenario?',
-      'A company has developed an eCommerce web application in AWS. What should they do to ensure that the application has the highest level of availability?',
-      'What does AWS Snowball provide? (Choose TWO)',
-      'A company has an AWS Enterprise Support plan. They want quick and efficient guidance with their billing and account inquiries. Which of the following should the company use?',
-      'A Japanese company hosts their applications on Amazon EC2 instances in the Tokyo Region. The company has opened new branches in the United States, and the US users are complaining of high latency. What can the company do to reduce latency for the users in the US while minimizing costs?',
-      'An organization has a large number of technical employees who operate their AWS Cloud infrastructure. What does AWS provide to help organize them into teams and then assign the appropriate permissions for each team?',
-      'A company has decided to migrate its Oracle database to AWS. Which AWS service can help achieve this without negatively impacting the functionality of the source database?',
-      'Adjusting compute capacity dynamically to reduce cost is an implementation of which AWS cloud best practice?',
-      'What are the benefits of having infrastructure hosted in AWS? (Choose TWO)',
-      'What is the advantage of the AWS-recommended practice of “decoupling” applications?',
-      'Which of the following helps a customer view the Amazon EC2 billing activity for the past month?',
-      'What do you gain from setting up consolidated billing for five different AWS accounts under another master account?',
-      'What should you do in order to keep the data on EBS volumes safe? (Choose TWO)',
-      'One of the most important AWS best-practices to follow is the cloud architecture principle of elasticity. How does this principle improve your architecture’s design?',
-      'A startup company is operating on limited funds and is extremely concerned about cost overruns. Which of the below options can be used to notify the company when their monthly AWS bill exceeds $2000? (Choose TWO)'
-    ];
+    // STAN
+    let QUESTIONS = []
+    let idx = 0
+    let correct = 0
+    const picks = []
 
-    // 2) Pula pytań (Practice Exam 2 i 3) — ~40 pozycji, wystarczy do losowania 20
-    const POOL = [
-      // --- EXAM 2 ---
-      {text:'A global company with a large number of AWS accounts is seeking a way in which they can centrally manage billing and security policies across all accounts. Which AWS Service will assist them in meeting these goals?', options:{A:'AWS Organizations',B:'AWS Trusted Advisor',C:'IAM User Groups',D:'AWS Config'}, correct:['A']},
-      {text:'Which service provides object-level storage in AWS?', options:{A:'Amazon EBS',B:'Amazon Instance Store',C:'Amazon EFS',D:'Amazon S3'}, correct:['D']},
-      {text:'Which S3 storage class is best for data with unpredictable access patterns?', options:{A:'S3 Intelligent‑Tiering',B:'S3 Glacier Flexible Retrieval',C:'S3 Standard',D:'S3 Standard‑IA'}, correct:['A']},
-      {text:'What is the AWS feature that provides an additional level of security above the default authentication mechanism of usernames and passwords?', options:{A:'Encrypted keys',B:'Email verification',C:'AWS KMS',D:'MFA'}, correct:['D']},
-      {text:'As part of their Enterprise Support plan, which service provides architectural and scaling guidance for product launches?', options:{A:'AWS Knowledge Center',B:'AWS Health Dashboard',C:'Infrastructure Event Management',D:'Support Concierge'}, correct:['C']},
-      {text:'Which is a best‑practice when designing solutions on AWS?', options:{A:'Invest heavily up front because designs are hard to change',B:'Use reservations to reduce costs when testing prod',C:'Automate wherever possible to make experimentation easier',D:'Provision large capacity to handle any spikes'}, correct:['C']},
-      {text:'According to the AWS Acceptable Use Policy, what is true regarding penetration testing of EC2 instances?', options:{A:'Not allowed',B:'Performed automatically by AWS',C:'Customer can test own instances without prior authorization',D:'Only on managed services'}, correct:['C']},
-      {text:'Which service ensures that messages between software components are not lost if one or more components fail?', options:{A:'Amazon SQS',B:'Amazon SES',C:'AWS Direct Connect',D:'Amazon Connect'}, correct:['A']},
-      {text:'Which help adhere to “Design for failure and nothing will fail”? (Choose TWO)', options:{A:'MFA',B:'Availability Zones',C:'Elastic Load Balancing',D:'Penetration testing',E:'Vertical Scaling'}, correct:['B','C']},
-      {text:'According to the Shared Responsibility Model, which are customer responsibilities? (Choose TWO)', options:{A:'Managing environmental events of AWS data centers',B:'Protecting confidentiality of data in transit in S3',C:'Controlling physical access to Regions',D:'Ensuring the underlying EC2 host is configured properly',E:'Patching applications installed on EC2'}, correct:['B','E']},
-      {text:'Which AWS services can be used as compute resources? (Choose TWO)', options:{A:'Amazon VPC',B:'Amazon CloudWatch',C:'Amazon S3',D:'Amazon EC2',E:'AWS Lambda'}, correct:['D','E']},
-      {text:'What is equivalent to a user name and password and is used to authenticate programmatic access to AWS services and APIs?', options:{A:'Instance Password',B:'Key pairs',C:'Access Keys',D:'MFA'}, correct:['C']},
-      {text:'What does Amazon ElastiCache provide?', options:{A:'In‑memory caching for read‑heavy applications',B:'Ehcache compatible in‑memory data store',C:'Online software store',D:'A domain name system in the cloud'}, correct:['A']},
-      {text:'Which EC2 purchasing option supports Bring Your Own License (BYOL) for most scenarios?', options:{A:'Dedicated Instances',B:'Dedicated Hosts',C:'On‑Demand',D:'Reserved Instances'}, correct:['B']},
-      {text:'Which is a benefit of moving infrastructure from on‑prem to AWS?', options:{A:'Free Enterprise Support',B:'Automatic data protection',C:'Reduced CapEx',D:'AWS manages customer applications'}, correct:['C']},
-      {text:'Important AWS design principles (Choose TWO)', options:{A:'Always use Global Services',B:'Always choose to pay as you go',C:'Treat servers as fixed resources',D:'Automate wherever possible',E:'Remove single points of failure'}, correct:['D','E']},
-      {text:'Which AWS Service establishes a dedicated, private network connection between AWS and your datacenter?', options:{A:'AWS Direct Connect',B:'Amazon CloudFront',C:'AWS Snowball',D:'Amazon Route 53'}, correct:['A']},
-      {text:'Which service protects web apps from SQL injection and other code vulnerabilities?', options:{A:'Amazon Cognito',B:'AWS IAM',C:'Amazon Aurora',D:'AWS WAF'}, correct:['D']},
-      {text:'An org needs to analyze and process a large number of data sets. Which service?', options:{A:'Amazon EMR',B:'Amazon MQ',C:'Amazon SNS',D:'Amazon SQS'}, correct:['A']},
-      {text:'Which AWS service provides the highest level of control over the underlying virtual infrastructure?', options:{A:'Amazon Redshift',B:'Amazon DynamoDB',C:'Amazon EC2',D:'Amazon RDS'}, correct:['C']},
-      {text:'In on‑prem you clone VMs from a template. What is the AWS equivalent?', options:{A:'IAM',B:'Internet gateway',C:'EBS Snapshot',D:'AMI'}, correct:['D']},
-      {text:'Two advantages of Cloud Computing over traditional data centers (Choose TWO)', options:{A:'Reserved Compute capacity',B:'Eliminating SPOFs',C:'Distributed infrastructure',D:'Virtualized compute resources',E:'Dedicated hosting'}, correct:['B','C']},
-      {text:'Which aspects of security are managed by AWS? (Choose TWO)', options:{A:'Encryption of EBS volumes',B:'VPC security',C:'Access permissions',D:'Hardware patching',E:'Securing global physical infrastructure'}, correct:['D','E']},
-      {text:'Which statement best describes the Operational Excellence pillar of the Well‑Architected Framework?', options:{A:'Ability to recover gracefully from failure',B:'Efficient use of computing resources',C:'Ability to monitor systems and improve processes and procedures',D:'Manage datacenter operations more efficiently'}, correct:['C']},
-      {text:'Which is NOT a benefit of Edge Locations?', options:{A:'Cache most recent responses',B:'Improve uploads experience',C:'Distribute traffic across multiple instances to reduce latency',D:'Distribute content globally with low latency'}, correct:['C']},
-      {text:'Change management tools to audit and monitor resource changes (Choose TWO)', options:{A:'AWS CloudTrail',B:'Amazon Comprehend',C:'AWS Transit Gateway',D:'AWS X‑Ray',E:'AWS Config'}, correct:['A','E']},
-      {text:'Which service allows you to run containerized apps on a cluster of EC2 instances?', options:{A:'Amazon ECS',B:'AWS Data Pipeline',C:'AWS Cloud9',D:'AWS Personal Health Dashboard'}, correct:['A']},
-      {text:'Which service helps businesses ensure compliance in AWS?', options:{A:'CloudFront',B:'CloudEndure Migration',C:'CloudWatch',D:'CloudTrail'}, correct:['D']},
-      {text:'Services/features that help maintain high availability and fault tolerance (Choose TWO)', options:{A:'AWS Direct Connect',B:'Amazon EC2 Auto Scaling',C:'Elastic Load Balancer',D:'CloudFormation',E:'Network ACLs'}, correct:['B','C']},
-      {text:'Which activity may help reduce your AWS monthly costs?', options:{A:'Enable EC2 Auto Scaling for workloads',B:'Use Network Load Balancer for HTTP',C:'Remove all Cost Allocation Tags',D:'Deploy across multiple AZs'}, correct:['A']},
-      {text:'Feature that uses CloudFront edge locations to transfer files to S3 with higher upload speeds', options:{A:'S3 Transfer Acceleration',B:'AWS WAF',C:'AWS Snowmobile',D:'AWS Snowball'}, correct:['A']},
-      {text:'Which security feature is associated with an EC2 instance and filters incoming traffic?', options:{A:'AWS X‑Ray',B:'Network ACL',C:'Security Groups',D:'VPC Flow logs'}, correct:['C']},
-      {text:'Which AWS services reduce latency for global users? (Choose TWO)', options:{A:'AWS KMS',B:'AWS Global Accelerator',C:'AWS Direct Connect',D:'AWS Glue',E:'Amazon CloudFront'}, correct:['B','E']},
-      // --- EXAM 3 ---
-      {text:'Savings Plans are available for which of the following AWS compute services? (Choose TWO)', options:{A:'AWS Batch',B:'AWS Outposts',C:'Amazon Lightsail',D:'Amazon EC2',E:'AWS Lambda'}, correct:['D','E']},
-      {text:'A company has business critical workloads hosted on AWS and they are unwilling to accept any downtime. Which of the following is a recommended best practice to protect their workloads in the event of an unexpected natural disaster?', options:{A:'Replicate data across Edge Locations and fail over via CloudFront',B:'Deploy across multiple AZs in one Region',C:'Create backups in another subnet and recover later',D:'Deploy to another Region and implement Active‑Active DR'}, correct:['D']},
-      {text:'Which statement is correct with regards to AWS service limits? (Choose TWO)', options:{A:'You can contact AWS support to increase limits',B:'Each IAM user has the same service limit',C:'There are no service limits on AWS',D:'You can use Trusted Advisor to monitor service limits',E:'SES sends emails when close to limits'}, correct:['A','D']},
-      {text:'What is the AWS tool that enables you to use scripts to manage all AWS services and resources?', options:{A:'AWS Console',B:'AWS Service Catalog',C:'AWS OpsWorks',D:'AWS CLI'}, correct:['D']},
-      {text:'Which connectivity option uses IPSec to establish encrypted connectivity between an on‑prem network and AWS?', options:{A:'Internet Gateway',B:'AWS IQ',C:'AWS Direct Connect',D:'AWS Site‑to‑Site VPN'}, correct:['D']},
-      {text:'Minimum level of AWS support that provides 24x7 access to technical support engineers via phone and chat?', options:{A:'Enterprise',B:'Developer',C:'Basic',D:'Business'}, correct:['D']},
-      {text:'Which of the following is used to control network traffic in AWS? (Choose TWO)', options:{A:'Network ACLs',B:'Key Pairs',C:'Access Keys',D:'IAM Policies',E:'Security Groups'}, correct:['A','E']},
-      {text:'A media transcoding app is designed to recover quickly from hardware failures. Which instance purchasing option is the most cost‑effective?', options:{A:'Reserved',B:'Spot',C:'On‑Demand',D:'Dedicated'}, correct:['B']},
-      {text:'Which AWS Service provides the current status of all AWS Services in all AWS Regions?', options:{A:'AWS Service Health Dashboard',B:'AWS Management Console',C:'Amazon CloudWatch',D:'AWS Personal Health Dashboard'}, correct:['A']},
-      {text:'Which AWS service or feature can be used to call AWS Services from different programming languages?', options:{A:'AWS SDK',B:'AWS CLI',C:'AWS CodeDeploy',D:'AWS Management Console'}, correct:['A']}
-    ];
+    // DOM refs
+    const els = {
+      bar: document.getElementById('bar'),
+      counter: document.getElementById('counter'),
+      multiFlag: document.getElementById('multiFlag'),
+      score: document.getElementById('score'),
+      q: document.getElementById('question'),
+      opts: document.getElementById('options'),
+      feedback: document.getElementById('feedback'),
+      submit: document.getElementById('submit'),
+      next: document.getElementById('next'),
+      restart: document.getElementById('restart'),
+      result: document.getElementById('result'),
+      finalScore: document.getElementById('finalScore'),
+      finalSub: document.getElementById('finalSub'),
+      review: document.getElementById('review'),
+      datasetCard: document.getElementById('datasetCard'),
+      quizCard: document.getElementById('quizCard'),
+      datasetSelect: document.getElementById('datasetSelect'),
+      questionCountSelect: document.getElementById('questionCountSelect'),
+      loadBtn: document.getElementById('loadBtn'),
+      loadStatus: document.getElementById('loadStatus')
+    }
 
-    // 3) Losowanie — filtr bez powtórek
-    function shuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
-    const QUESTIONS = shuffle(POOL.filter(q=>!EXCLUDE.includes(q.text))).slice(0,20);
-
-    // 4) Logika quizu (identyczna jak wcześniej)
-    let idx=0, correct=0; const picks=[];
-    const els={
-      bar:document.getElementById('bar'),counter:document.getElementById('counter'),multiFlag:document.getElementById('multiFlag'),
-      score:document.getElementById('score'),q:document.getElementById('question'),opts:document.getElementById('options'),
-      feedback:document.getElementById('feedback'),submit:document.getElementById('submit'),next:document.getElementById('next'),restart:document.getElementById('restart'),
-      result:document.getElementById('result'),finalScore:document.getElementById('finalScore'),finalSub:document.getElementById('finalSub'),review:document.getElementById('review')};
+    function shuffle(a){
+      for (let i=a.length-1;i>0;i--){
+        const j=Math.floor(Math.random()*(i+1))
+        const tmp = a[i]
+        a[i] = a[j]
+        a[j] = tmp
+      }
+      return a
+    }
 
     function render(){
-      const q=QUESTIONS[idx];
-      els.feedback.textContent=''; els.submit.disabled=true; els.next.style.display='none';
-      els.multiFlag.style.display=q.correct.length>1?'inline-flex':'none';
-      els.counter.textContent=`Pytanie ${idx+1} / ${QUESTIONS.length}`;
-      els.bar.style.width=Math.round((idx)/QUESTIONS.length*100)+'%';
-      els.q.textContent=q.text; els.opts.innerHTML='';
+      const q = QUESTIONS[idx]
 
-      const currentPick=new Set();
-      Object.entries(q.options).forEach(([L,txt])=>{
-        const row=document.createElement('div'); row.className='opt'; const id=`q${idx}_${L}`;
-        row.innerHTML=`<input type="checkbox" id="${id}"><label for="${id}"><span class="letter">${L}</span><span>${txt}</span></label>`;
-        row.addEventListener('click',()=>{
-          const chk=row.querySelector('input');
-          if(q.correct.length===1){[...els.opts.querySelectorAll('input')].forEach(i=>{i.checked=false; i.parentElement.classList.remove('checked');});}
-          chk.checked=!chk.checked; row.classList.toggle('checked',chk.checked);
-          const picksNow=[...els.opts.querySelectorAll('input')].filter(i=>i.checked).map(i=>i.id.split('_')[1]);
-          currentPick.clear(); picksNow.forEach(x=>currentPick.add(x));
-          els.submit.disabled=currentPick.size===0;
-        });
-        els.opts.appendChild(row);
-      });
+      els.feedback.textContent = ''
+      els.submit.disabled = true
+      els.next.style.display = 'none'
 
-      els.submit.onclick=()=>{
-        const picked=[...els.opts.querySelectorAll('input')].filter(i=>i.checked).map(i=>i.id.split('_')[1]);
-        const need=new Set(q.correct), got=new Set(picked); picks[idx]=picked;
-        const ok=need.size===got.size && [...need].every(x=>got.has(x));
-        [...els.opts.children].forEach(row=>{const L=row.querySelector('.letter').textContent; if(need.has(L)) row.classList.add('correct'); if(got.has(L)&&!need.has(L)) row.classList.add('wrong');});
-        els.submit.disabled=true; els.next.style.display='inline-flex';
-        if(ok){correct++; els.feedback.innerHTML='<span class="ok">✅ Dobrze!</span>';} else {els.feedback.innerHTML='<span class="bad">❌ Niedokładnie.</span> Prawidłowa odpowiedź: <b>'+[...need].join(', ')+'</b>';}
-        els.score.textContent=`${correct} poprawnych`;
-      };
-      els.next.onclick=()=>{ if(idx<QUESTIONS.length-1){ idx++; render(); } else { finish(); } };
+      els.multiFlag.style.display = q.correct.length > 1 ? 'inline-flex' : 'none'
+
+      els.counter.textContent = `Pytanie ${idx + 1} / ${QUESTIONS.length}`
+      els.bar.style.width = Math.round((idx) / QUESTIONS.length * 100) + '%'
+
+      els.q.textContent = q.text
+
+      els.opts.innerHTML = ''
+      const currentPick = new Set()
+
+      Object.entries(q.options).forEach(([L, txt]) => {
+        const row = document.createElement('div')
+        row.className = 'opt'
+        const id = `q${idx}_${L}`
+
+        row.innerHTML = `
+          <input type="checkbox" id="${id}">
+          <label for="${id}">
+            <span class="letter">${L}</span>
+            <span>${txt}</span>
+          </label>
+        `
+
+        row.addEventListener('click', () => {
+          const chk = row.querySelector('input')
+
+          if (q.correct.length === 1) {
+            [...els.opts.querySelectorAll('input')].forEach(i => {
+              i.checked = false
+              i.parentElement.classList.remove('checked')
+            })
+          }
+
+          chk.checked = !chk.checked
+          row.classList.toggle('checked', chk.checked)
+
+          const picksNow = [...els.opts.querySelectorAll('input')]
+            .filter(i => i.checked)
+            .map(i => i.id.split('_')[1])
+
+          currentPick.clear()
+          picksNow.forEach(x => currentPick.add(x))
+
+          els.submit.disabled = currentPick.size === 0
+        })
+
+        els.opts.appendChild(row)
+      })
+
+      els.submit.onclick = () => {
+        const picked = [...els.opts.querySelectorAll('input')]
+          .filter(i => i.checked)
+          .map(i => i.id.split('_')[1])
+
+        const need = new Set(q.correct)
+        const got  = new Set(picked)
+        picks[idx] = picked
+
+        const ok = (need.size === got.size) && [...need].every(x => got.has(x))
+
+        ;[...els.opts.children].forEach(row => {
+          const L = row.querySelector('.letter').textContent
+          if (need.has(L)) row.classList.add('correct')
+          if (got.has(L) && !need.has(L)) row.classList.add('wrong')
+        })
+
+        els.submit.disabled = true
+        els.next.style.display = 'inline-flex'
+
+        if (ok) {
+          correct++
+          els.feedback.innerHTML = '<span class="ok">✅ Dobrze!</span>'
+        } else {
+          els.feedback.innerHTML =
+            '<span class="bad">❌ Niedokładnie.</span> Prawidłowa odpowiedź: <b>' +
+            [...need].join(', ') +
+            '</b>'
+        }
+
+        els.score.textContent = `${correct} poprawnych`
+      }
+
+      els.next.onclick = () => {
+        if (idx < QUESTIONS.length - 1) {
+          idx++
+          render()
+        } else {
+          finish()
+        }
+      }
     }
 
     function finish(){
-      const pct=Math.round(correct/QUESTIONS.length*1000)/10;
-      els.bar.style.width='100%';
-      els.counter.textContent=`Koniec — ${QUESTIONS.length} pytań`;
-      els.q.innerHTML='<b>To już wszystko!</b>'; els.opts.innerHTML='';
-      els.submit.disabled=true; els.next.style.display='none'; els.feedback.textContent='';
-      els.result.style.display='block';
-      els.finalScore.textContent=`Wynik: ${correct}/${QUESTIONS.length} (${pct}%)`;
-      const wrong=QUESTIONS.map((q,i)=>({q,i})).filter(({q,i})=> (q.correct.join(',')!==(picks[i]||[]).join(',')));
-      const cnt=wrong.length; els.finalSub.textContent=cnt===0?'Perfekcyjnie! Wszystko poprawnie.':`Błędne/niepełne odpowiedzi: ${cnt}`;
-      if(cnt>0){ const frag=document.createDocumentFragment(); wrong.forEach(({q,i})=>{ const d=document.createElement('details'); const letters=Object.keys(q.options).sort(); const picked=(picks[i]||[]).join(', ')||'—'; d.innerHTML=`<summary><b>Pytanie ${i+1}.</b> ${q.text}</summary><div class="muted">Twoja odpowiedź: <b>${picked}</b> &nbsp;|&nbsp; Poprawna: <b>${q.correct.join(', ')}</b></div><ul class="muted">${letters.map(L=>`<li><b>${L}.</b> ${q.options[L]}</li>`).join('')}</ul>`; frag.appendChild(d); }); els.review.innerHTML=''; els.review.appendChild(frag);} else {els.review.innerHTML='';}
+      const pct = Math.round(correct / QUESTIONS.length * 1000) / 10
+
+      els.bar.style.width = '100%'
+      els.counter.textContent = `Koniec — ${QUESTIONS.length} pytań`
+
+      els.q.innerHTML = '<b>To już wszystko!</b>'
+      els.opts.innerHTML = ''
+      els.submit.disabled = true
+      els.next.style.display = 'none'
+      els.feedback.textContent = ''
+
+      els.result.style.display = 'block'
+      els.finalScore.textContent = `Wynik: ${correct}/${QUESTIONS.length} (${pct}%)`
+
+      const wrong = QUESTIONS
+        .map((q,i)=>({q,i}))
+        .filter(({q,i}) => (q.correct.join(',') !== (picks[i] || []).join(',')))
+
+      const cnt = wrong.length
+
+      els.finalSub.textContent = cnt === 0
+        ? 'Perfekcyjnie! Wszystko poprawnie.'
+        : `Błędne/niepełne odpowiedzi: ${cnt}`
+
+      if (cnt > 0) {
+        const frag = document.createDocumentFragment()
+
+        wrong.forEach(({q,i}) => {
+          const d = document.createElement('details')
+          const letters = Object.keys(q.options).sort()
+          const pickedAns = (picks[i] || []).join(', ') || '—'
+
+          d.innerHTML = `
+            <summary><b>Pytanie ${i + 1}.</b> ${q.text}</summary>
+            <div class="muted">
+              Twoja odpowiedź: <b>${pickedAns}</b>
+              &nbsp;|&nbsp;
+              Poprawna: <b>${q.correct.join(', ')}</b>
+            </div>
+            <ul class="muted">
+              ${letters.map(L => `<li><b>${L}.</b> ${q.options[L]}</li>`).join('')}
+            </ul>
+          `
+
+          frag.appendChild(d)
+        })
+
+        els.review.innerHTML = ''
+        els.review.appendChild(frag)
+      } else {
+        els.review.innerHTML = ''
+      }
     }
 
-    els.restart.onclick=()=>{ idx=0; correct=0; picks.length=0; els.score.textContent='0 poprawnych'; render(); };
+    function resetQuizState() {
+      idx = 0
+      correct = 0
+      picks.length = 0
+      els.score.textContent = '0 poprawnych'
+      els.result.style.display = 'none'
+      els.bar.style.width = '0%'
+      els.feedback.textContent = ''
+      els.finalScore.textContent = ''
+      els.finalSub.textContent = ''
+      els.review.innerHTML = ''
+      els.q.textContent = ''
+      els.opts.innerHTML = ''
+    }
 
-    // Init
-    render();
+    // Restart quizu bez ponownego wyboru pliku/liczby pytań
+    els.restart.onclick = () => {
+      idx = 0
+      correct = 0
+      picks.length = 0
+      els.score.textContent = '0 poprawnych'
+      els.result.style.display = 'none'
+      render()
+    }
+
+    async function loadQuestionsFromFile(fileName, desiredCount){
+      els.loadStatus.textContent = `Ładowanie ${fileName} ...`
+
+      try {
+        const res = await fetch(fileName)
+        if (!res.ok) {
+          throw new Error(`HTTP ${res.status}`)
+        }
+
+        const raw = await res.json()
+
+        const allQuestions = raw.map(q => ({
+          text: q.question,
+          options: q.options,
+          correct: q.correct_answers
+        }))
+
+        // wybór liczby pytań
+        let count = parseInt(desiredCount, 10)
+        if (isNaN(count) || count < 1) {
+          count = 1
+        }
+
+        if (count > allQuestions.length) {
+          count = allQuestions.length
+          els.loadStatus.textContent =
+            `Zażądano więcej pytań niż dostępne, więc używam maksymalnie ${count}.`
+        } else {
+          els.loadStatus.textContent = ''
+        }
+
+        QUESTIONS = shuffle(allQuestions).slice(0, count)
+
+        resetQuizState()
+        render()
+
+        els.loadStatus.textContent +=
+          (els.loadStatus.textContent ? ' ' : '') +
+          `Załadowano ${fileName}. Wylosowano ${QUESTIONS.length} pytań.`
+
+        // chowamy panel wyboru, pokazujemy quiz
+        els.datasetCard.style.display = 'none'
+        els.quizCard.style.display = 'block'
+      } catch (err) {
+        els.loadStatus.textContent =
+          `Błąd przy ładowaniu ${fileName}: ${err.message}`
+        console.error(err)
+      }
+    }
+
+    // Automatyczne wykrywanie dostępnych plików .json z katalogu /datasets
+    async function initDatasets() {
+      try {
+        const res = await fetch('./datasets/')
+        if (!res.ok) {
+          throw new Error(`Brak dostępu do /datasets (HTTP ${res.status})`)
+        }
+
+        const htmlIndex = await res.text()
+
+        const parser = new DOMParser()
+        const doc = parser.parseFromString(htmlIndex, 'text/html')
+
+        const links = [...doc.querySelectorAll('a')]
+          .map(a => a.getAttribute('href'))
+          .filter(href => href && href.toLowerCase().endsWith('.json'))
+
+        els.datasetSelect.innerHTML = ''
+
+        if (links.length === 0) {
+          const opt = document.createElement('option')
+          opt.value = ''
+          opt.textContent = 'Brak plików .json w /datasets'
+          els.datasetSelect.appendChild(opt)
+
+          els.loadStatus.textContent =
+            'Nie znaleziono żadnych plików .json w katalogu /datasets'
+          return
+        }
+
+        links.forEach(href => {
+          const isAbsoluteFromRoot = href.startsWith('/')
+
+          const fetchPath = isAbsoluteFromRoot
+            ? href
+            : './datasets/' + href
+
+          const justFileName = href.split('/').pop()
+          const label = justFileName.replace(/\.json$/i, '')
+
+          const opt = document.createElement('option')
+          opt.value = fetchPath
+          opt.textContent = label
+          els.datasetSelect.appendChild(opt)
+        })
+
+        els.loadStatus.textContent =
+          `Znaleziono ${links.length} plik(i) .json w /datasets`
+      } catch (err) {
+        els.datasetSelect.innerHTML = ''
+        const opt = document.createElement('option')
+        opt.value = ''
+        opt.textContent = 'Nie można odczytać /datasets'
+        els.datasetSelect.appendChild(opt)
+
+        els.loadStatus.textContent =
+          `Nie udało się pobrać listy plików z /datasets: ${err.message}`
+        console.error(err)
+      }
+    }
+
+    // Start quizu po kliknięciu
+    els.loadBtn.addEventListener('click', () => {
+      const chosenFile = els.datasetSelect.value
+      const desiredCount = els.questionCountSelect.value
+
+      if (!chosenFile) {
+        els.loadStatus.textContent = 'Nie wybrano pliku z pytaniami'
+        return
+      }
+
+      loadQuestionsFromFile(chosenFile, desiredCount)
+    })
+
+    // init
+    initDatasets()
   </script>
 </body>
 </html>
