@@ -1,262 +1,304 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AWS CLF-C02 — Quiz</title>
   <style>
     :root {
-      --bg:#0b0f19;
-      --card:#11182a;
-      --muted:#8ea1b5;
-      --text:#e8eef6;
-      --accent:#4ea8ff;
-      --ok:#28c76f;
-      --bad:#ff5d5d;
-      --chip:#1a2440
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      background:linear-gradient(180deg,#0b0f19,#0e1324);
-      color:var(--text);
-    }
-    .wrap{
-      max-width:980px;
-      margin:0 auto;
-      padding:24px;
-      display:flex;
-      flex-direction:column;
-      gap:18px
+      --bg: #0b0f19;
+      --card: #11182a;
+      --muted: #8ea1b5;
+      --text: #e8eef6;
+      --accent: #4ea8ff;
+      --ok: #28c76f;
+      --bad: #ff5d5d;
+      --chip: #1a2440
     }
 
-    .card{
-      background:var(--card);
-      border:1px solid #1e2741;
-      border-radius:18px;
-      padding:22px;
-      box-shadow:0 10px 30px rgba(0,0,0,.35)
+    * {
+      box-sizing: border-box
     }
 
-    h1{
-      color:var(--text);
-      font-weight:800;
-      margin:.2rem 0 1rem;
-      font-size:1.6rem
-    }
-    .sub{
-      color:var(--muted);
-      font-size:.95rem;
-      margin-top:-.3rem;
-      line-height:1.4
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(180deg, #0b0f19, #0e1324);
+      color: var(--text);
     }
 
-    .row-inline{
-      display:flex;
-      flex-wrap:wrap;
-      align-items:flex-end;
-      gap:12px;
-      margin-top:16px;
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px
     }
 
-    .field{
-      display:flex;
-      flex-direction:column;
-      min-width:200px;
+    .card {
+      background: var(--card);
+      border: 1px solid #1e2741;
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .35)
     }
 
-    .field-label{
-      font-size:.8rem;
-      font-weight:600;
-      color:var(--muted);
-      margin-bottom:4px;
-      display:block;
+    h1 {
+      color: var(--text);
+      font-weight: 800;
+      margin: .2rem 0 1rem;
+      font-size: 1.6rem
     }
 
-    select{
-      appearance:none;
-      background:#0f162a;
-      border:1px solid #2a355c;
-      border-radius:10px;
-      padding:10px 12px;
-      color:#cfe2ff;
-      font-size:.9rem;
-      line-height:1.3;
-      cursor:pointer;
-      min-width:120px;
+    .sub {
+      color: var(--muted);
+      font-size: .95rem;
+      margin-top: -.3rem;
+      line-height: 1.4
     }
 
-    .load-btn{
-      background:var(--accent);
-      color:#031227;
-      border:0;
-      border-radius:12px;
-      padding:12px 16px;
-      font-weight:700;
-      cursor:pointer;
-      font-size:.9rem;
-      white-space:nowrap;
+    .row-inline {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      gap: 12px;
+      margin-top: 16px;
     }
 
-    .hint{
-      font-size:.8rem;
-      color:var(--muted);
-      line-height:1.4;
+    .field {
+      display: flex;
+      flex-direction: column;
+      min-width: 200px;
     }
 
-    .qnum{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      margin:.25rem 0 1rem;
-      color:var(--muted)
-    }
-    .chip{
-      background:var(--chip);
-      color:#c9d6ea;
-      border:1px solid #2a355c;
-      border-radius:999px;
-      padding:6px 10px;
-      font-size:.85rem
-    }
-    .question{
-      color:var(--text);
-      font-size:1.15rem;
-      line-height:1.45;
-      min-height:2.5em
-    }
-    .options{
-      display:grid;
-      grid-template-columns:1fr;
-      gap:10px;
-      margin:18px 0
-    }
-    .opt{
-      display:flex;
-      align-items:stretch;
-      border:1px solid #273059;
-      background:#0f162a;
-      border-radius:14px;
-      overflow:hidden
-    }
-    .opt input{display:none}
-    .opt label{
-      display:flex;
-      gap:12px;
-      align-items:center;
-      width:100%;
-      padding:14px 14px;
-      cursor:pointer;
-      color:#dfe7f7
-    }
-    .letter{
-      min-width:34px;
-      height:34px;
-      border-radius:8px;
-      display:grid;
-      place-items:center;
-      background:#1a2440;
-      border:1px solid #2c3a66;
-      color:#a9bee0;
-      font-weight:700
-    }
-    .opt.checked{
-      border-color:var(--accent);
-      box-shadow:0 0 0 2px rgba(78,168,255,.25) inset
-    }
-    .opt.correct{border-color:var(--ok)}
-    .opt.wrong{border-color:var(--bad)}
-
-    .actions{
-      display:flex;
-      gap:10px;
-      align-items:center;
-      flex-wrap:wrap
-    }
-    button{
-      border:0;
-      border-radius:12px;
-      padding:12px 16px;
-      font-weight:700;
-      cursor:pointer;
-      font-size:.9rem
-    }
-    .primary{
-      background:var(--accent);
-      color:#031227
-    }
-    .ghost{
-      background:#131b31;
-      color:#cfe2ff;
-      border:1px solid #2a355c
-    }
-    .primary[disabled]{
-      opacity:.6;
-      cursor:not-allowed
+    .field-label {
+      font-size: .8rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 4px;
+      display: block;
     }
 
-    .feedback{
-      min-height:1.4em;
-      margin:12px 2px 0;
-      font-size:.95rem
-    }
-    .ok{color:var(--ok)}
-    .bad{color:var(--bad)}
-
-    .progress{
-      height:10px;
-      background:#0e1426;
-      border:1px solid #22305b;
-      border-radius:999px;
-      overflow:hidden;
-      margin:12px 0 18px
-    }
-    .bar{
-      height:100%;
-      background:linear-gradient(90deg,#4ea8ff,#6ee7ff)
+    select {
+      appearance: none;
+      background: #0f162a;
+      border: 1px solid #2a355c;
+      border-radius: 10px;
+      padding: 10px 12px;
+      color: #cfe2ff;
+      font-size: .9rem;
+      line-height: 1.3;
+      cursor: pointer;
+      min-width: 120px;
     }
 
-    .footer{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      margin-top:10px;
-      color:var(--muted);
-      font-size:.92rem;
-      flex-wrap:wrap;
-      row-gap:8px
-    }
-    .pill{
-      padding:6px 10px;
-      border-radius:999px;
-      border:1px solid #2a355c;
-      background:#121a30;
-      color:#cfe2ff
+    .load-btn {
+      background: var(--accent);
+      color: #031227;
+      border: 0;
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: .9rem;
+      white-space: nowrap;
     }
 
-    .score{
-      font-size:1.6rem;
-      font-weight:800;
-      color:var(--text)
+    .hint {
+      font-size: .8rem;
+      color: var(--muted);
+      line-height: 1.4;
     }
-    .review{
-      margin-top:16px
+
+    .qnum {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: .25rem 0 1rem;
+      color: var(--muted)
     }
-    details{
-      background:#0f162a;
-      border:1px solid #26335e;
-      border-radius:12px;
-      padding:12px 14px;
-      margin:10px 0
+
+    .chip {
+      background: var(--chip);
+      color: #c9d6ea;
+      border: 1px solid #2a355c;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: .85rem
     }
-    summary{
-      cursor:pointer;
-      color:#cfe2ff
+
+    .question {
+      color: var(--text);
+      font-size: 1.15rem;
+      line-height: 1.45;
+      min-height: 2.5em
     }
-    .muted{color:#9db2cf}
+
+    .options {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin: 18px 0
+    }
+
+    .opt {
+      display: flex;
+      align-items: stretch;
+      border: 1px solid #273059;
+      background: #0f162a;
+      border-radius: 14px;
+      overflow: hidden
+    }
+
+    .opt input {
+      display: none
+    }
+
+    .opt label {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      width: 100%;
+      padding: 14px 14px;
+      cursor: pointer;
+      color: #dfe7f7
+    }
+
+    .letter {
+      min-width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      background: #1a2440;
+      border: 1px solid #2c3a66;
+      color: #a9bee0;
+      font-weight: 700
+    }
+
+    .opt.checked {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px rgba(78, 168, 255, .25) inset
+    }
+
+    .opt.correct {
+      border-color: var(--ok)
+    }
+
+    .opt.wrong {
+      border-color: var(--bad)
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap
+    }
+
+    button {
+      border: 0;
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: .9rem
+    }
+
+    .primary {
+      background: var(--accent);
+      color: #031227
+    }
+
+    .ghost {
+      background: #131b31;
+      color: #cfe2ff;
+      border: 1px solid #2a355c
+    }
+
+    .primary[disabled] {
+      opacity: .6;
+      cursor: not-allowed
+    }
+
+    .feedback {
+      min-height: 1.4em;
+      margin: 12px 2px 0;
+      font-size: .95rem
+    }
+
+    .ok {
+      color: var(--ok)
+    }
+
+    .bad {
+      color: var(--bad)
+    }
+
+    .progress {
+      height: 10px;
+      background: #0e1426;
+      border: 1px solid #22305b;
+      border-radius: 999px;
+      overflow: hidden;
+      margin: 12px 0 18px
+    }
+
+    .bar {
+      height: 100%;
+      background: linear-gradient(90deg, #4ea8ff, #6ee7ff)
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: .92rem;
+      flex-wrap: wrap;
+      row-gap: 8px
+    }
+
+    .pill {
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid #2a355c;
+      background: #121a30;
+      color: #cfe2ff
+    }
+
+    .score {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--text)
+    }
+
+    .review {
+      margin-top: 16px
+    }
+
+    details {
+      background: #0f162a;
+      border: 1px solid #26335e;
+      border-radius: 12px;
+      padding: 12px 14px;
+      margin: 10px 0
+    }
+
+    summary {
+      cursor: pointer;
+      color: #cfe2ff
+    }
+
+    .muted {
+      color: #9db2cf
+    }
   </style>
 </head>
+
 <body>
   <div class="wrap">
 
@@ -264,9 +306,9 @@
     <div class="card" id="datasetCard">
       <h1>Wybierz zestaw pytań</h1>
       <div class="sub">
-        1. Wybierz plik z pytaniami z folderu <b>/datasets</b><br/>
-        2. Wybierz ile pytań chcesz w tym quizie<br/>
-        3. Kliknij „Załaduj bazę pytań ▶”<br/>
+        1. Wybierz plik z pytaniami z folderu <b>/datasets</b><br />
+        2. Wybierz ile pytań chcesz w tym quizie<br />
+        3. Kliknij „Załaduj bazę pytań ▶”<br />
         Po załadowaniu ten panel zniknie, a pojawi się quiz.
       </div>
 
@@ -304,11 +346,13 @@
     <div class="card" id="quizCard" style="display:none;">
       <h1>AWS CLF-C02 — Quiz</h1>
       <div class="sub">
-        Masz losowy zestaw pytań na podstawie wybranego pliku i liczby pytań.<br/>
+        Masz losowy zestaw pytań na podstawie wybranego pliku i liczby pytań.<br />
         Restart odświeża quiz w ramach tej samej puli, bez ponownego wyboru pliku.
       </div>
 
-      <div class="progress"><div id="bar" class="bar" style="width:0%"></div></div>
+      <div class="progress">
+        <div id="bar" class="bar" style="width:0%"></div>
+      </div>
 
       <div class="qnum">
         <span class="chip" id="counter">Pytanie 1 / 20</span>
@@ -372,9 +416,9 @@
       loadStatus: document.getElementById('loadStatus')
     }
 
-    function shuffle(a){
-      for (let i=a.length-1;i>0;i--){
-        const j=Math.floor(Math.random()*(i+1))
+    function shuffle(a) {
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1))
         const tmp = a[i]
         a[i] = a[j]
         a[j] = tmp
@@ -382,7 +426,7 @@
       return a
     }
 
-    function render(){
+    function render() {
       const q = QUESTIONS[idx]
 
       els.feedback.textContent = ''
@@ -444,16 +488,16 @@
           .map(i => i.id.split('_')[1])
 
         const need = new Set(q.correct)
-        const got  = new Set(picked)
+        const got = new Set(picked)
         picks[idx] = picked
 
         const ok = (need.size === got.size) && [...need].every(x => got.has(x))
 
-        ;[...els.opts.children].forEach(row => {
-          const L = row.querySelector('.letter').textContent
-          if (need.has(L)) row.classList.add('correct')
-          if (got.has(L) && !need.has(L)) row.classList.add('wrong')
-        })
+          ;[...els.opts.children].forEach(row => {
+            const L = row.querySelector('.letter').textContent
+            if (need.has(L)) row.classList.add('correct')
+            if (got.has(L) && !need.has(L)) row.classList.add('wrong')
+          })
 
         els.submit.disabled = true
         els.next.style.display = 'inline-flex'
@@ -481,7 +525,7 @@
       }
     }
 
-    function finish(){
+    function finish() {
       const pct = Math.round(correct / QUESTIONS.length * 1000) / 10
 
       els.bar.style.width = '100%'
@@ -497,8 +541,8 @@
       els.finalScore.textContent = `Wynik: ${correct}/${QUESTIONS.length} (${pct}%)`
 
       const wrong = QUESTIONS
-        .map((q,i)=>({q,i}))
-        .filter(({q,i}) => (q.correct.join(',') !== (picks[i] || []).join(',')))
+        .map((q, i) => ({ q, i }))
+        .filter(({ q, i }) => (q.correct.join(',') !== (picks[i] || []).join(',')))
 
       const cnt = wrong.length
 
@@ -509,7 +553,7 @@
       if (cnt > 0) {
         const frag = document.createDocumentFragment()
 
-        wrong.forEach(({q,i}) => {
+        wrong.forEach(({ q, i }) => {
           const d = document.createElement('details')
           const letters = Object.keys(q.options).sort()
           const pickedAns = (picks[i] || []).join(', ') || '—'
@@ -561,7 +605,7 @@
       render()
     }
 
-    async function loadQuestionsFromFile(fileName, desiredCount){
+    async function loadQuestionsFromFile(fileName, desiredCount) {
       els.loadStatus.textContent = `Ładowanie ${fileName} ...`
 
       try {
@@ -614,61 +658,43 @@
     // Automatyczne wykrywanie dostępnych plików .json z katalogu /datasets
     async function initDatasets() {
       try {
-        const res = await fetch('./datasets/')
+        const res = await fetch('./datasets.json');
         if (!res.ok) {
-          throw new Error(`Brak dostępu do /datasets (HTTP ${res.status})`)
+          throw new Error(`HTTP ${res.status}`);
         }
 
-        const htmlIndex = await res.text()
+        const datasets = await res.json();
+        // datasets = [{file:"datasets/questions-practice1.json", label:"Practice 1"}, ...]
 
-        const parser = new DOMParser()
-        const doc = parser.parseFromString(htmlIndex, 'text/html')
+        els.datasetSelect.innerHTML = '';
 
-        const links = [...doc.querySelectorAll('a')]
-          .map(a => a.getAttribute('href'))
-          .filter(href => href && href.toLowerCase().endsWith('.json'))
+        if (datasets.length === 0) {
+          const opt = document.createElement('option');
+          opt.value = '';
+          opt.textContent = 'Brak dostępnych zestawów';
+          els.datasetSelect.appendChild(opt);
 
-        els.datasetSelect.innerHTML = ''
-
-        if (links.length === 0) {
-          const opt = document.createElement('option')
-          opt.value = ''
-          opt.textContent = 'Brak plików .json w /datasets'
-          els.datasetSelect.appendChild(opt)
-
-          els.loadStatus.textContent =
-            'Nie znaleziono żadnych plików .json w katalogu /datasets'
-          return
+          els.loadStatus.textContent = 'Brak wpisów w datasets.json';
+          return;
         }
 
-        links.forEach(href => {
-          const isAbsoluteFromRoot = href.startsWith('/')
+        datasets.forEach(ds => {
+          const opt = document.createElement('option');
+          opt.value = ds.file;      // np. "datasets/questions-practice1.json"
+          opt.textContent = ds.label || ds.file;
+          els.datasetSelect.appendChild(opt);
+        });
 
-          const fetchPath = isAbsoluteFromRoot
-            ? href
-            : './datasets/' + href
-
-          const justFileName = href.split('/').pop()
-          const label = justFileName.replace(/\.json$/i, '')
-
-          const opt = document.createElement('option')
-          opt.value = fetchPath
-          opt.textContent = label
-          els.datasetSelect.appendChild(opt)
-        })
-
-        els.loadStatus.textContent =
-          `Znaleziono ${links.length} plik(i) .json w /datasets`
+        els.loadStatus.textContent = `Znaleziono ${datasets.length} zestaw(y) pytań`;
       } catch (err) {
-        els.datasetSelect.innerHTML = ''
-        const opt = document.createElement('option')
-        opt.value = ''
-        opt.textContent = 'Nie można odczytać /datasets'
-        els.datasetSelect.appendChild(opt)
+        els.datasetSelect.innerHTML = '';
+        const opt = document.createElement('option');
+        opt.value = '';
+        opt.textContent = 'Nie można wczytać datasets.json';
+        els.datasetSelect.appendChild(opt);
 
-        els.loadStatus.textContent =
-          `Nie udało się pobrać listy plików z /datasets: ${err.message}`
-        console.error(err)
+        els.loadStatus.textContent = `Błąd przy pobieraniu datasets.json: ${err.message}`;
+        console.error(err);
       }
     }
 
@@ -689,4 +715,5 @@
     initDatasets()
   </script>
 </body>
+
 </html>
