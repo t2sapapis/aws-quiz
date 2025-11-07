@@ -1,5 +1,8 @@
 [
   { "file": "datasets/questions-practice1.json", "label": "Practice 1" },
   { "file": "datasets/questions-practice2.json", "label": "Practice 2" },
-  { "file": "datasets/questions-practice3.json", "label": "Practice 3" }
+  { "file": "datasets/questions-practice3.json", "label": "Practice 3" },
+  { "file": "datasets/questions-practice4.json", "label": "Practice 4" },
+  { "file": "datasets/questions-practice5.json", "label": "Practice 5" },
+  { "file": "datasets/questions-practice6.json", "label": "Practice 6" }
 ]
