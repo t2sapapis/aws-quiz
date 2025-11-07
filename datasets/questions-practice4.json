@@ -1,0 +1,605 @@
+[
+  {
+    "question": "Your company is planning to launch a new web application that will serve users around the world. To help ensure the application performs well and remains reliable, the IT team plans to use AWS for its vast global infrastructure. What BEST describes the benefits of AWS Global Infrastructure related to this situation? (Select TWO.)",
+    "options": {
+      "A": "Compliance with regulatory standards",
+      "B": "Cost savings",
+      "C": "Ease of use",
+      "D": "Fault tolerance",
+      "E": "High availability"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A government agency wants to maintain complete control over its IT infrastructure, but plans to use AWS Cloud services for specific applications. Which deployment type is BEST for this situation?",
+    "options": {
+      "A": "On-premises",
+      "B": "Compliance",
+      "C": "Cloud",
+      "D": "Hybrid"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "You are a software developer working for a company that is planning to migrate its existing application to the cloud. Your team lead has asked you to explain the client - server model to the rest of the team and how cloud computing fits into this model. Which statement BEST describes the client -server model and its relationship to cloud computing?",
+    "options": {
+      "A": "In the client -server model, the client sends requests to the server, which processes the requests and sends back responses. Cloud computing provides scalable server resources that can be accessed over the internet.",
+      "B": "In the client -server model, the client is responsible for securing their data, and the server is responsible for securing the physical hardware. Cloud computing replaces the client -server model. ---PAGE---",
+      "C": "In the client -server model, the server only handles data storage, and the client performs all processing tasks. Cloud computing provides data storage, but not processing power.",
+      "D": "The client -server model is outdated and no longer used in modern applications. Cloud computing has replaced it completely."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "You are a cloud architect at a company that has recently migrated its infrastructure to AWS. Your manager has asked you to debrief your team on which responsibilities the customer has when it comes to securing cloud resources. What is the customer's responsibility, based on the AWS Shared Responsibility Model? (Select TWO.)",
+    "options": {
+      "A": "Networking and infrastructure hardware maintenance",
+      "B": "Physical security of data centers",
+      "C": "Updating compute, networking, storage, and database software",
+      "D": "Managing operating system (OS) patches",
+      "E": "Encrypting client -side data"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "You work for a sports apparel company that is expanding its operations to global customers. The company wants to deploy resources to multiple AWS locations to achieve high availability. You are tasked with explaining the basics of AWS Global Infrastructure  to your chief operating officer (COO). The COO needs help understanding the difference between AWS Regions and Availability Zones. Which statement BEST describes the difference between AWS Regions and Availability Zones?",
+    "options": {
+      "A": "An Availability Zone is a geographical location that contains three or more Regions. A Region is a distinct location within an Availability Zone that contains one or more discrete data centers.",
+      "B": "An Availability Zone spans multiple physical locations across Regions, and Regions are located across the world.",
+      "C": "A Region is a single data center, and an Availability Zone consists of multiple data centers.",
+      "D": "A Region is a geographical location that contains three or more Availability Zones. An Availability Zone is a distinct location within a Region that contains one or more discrete data centers. ---PAGE---"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A finance company is interested in migrating to the cloud. They are curious if they will have enough staff to secure both their office space and the physical infrastructure of their cloud computing resources.  Which statement BEST describes the company's responsibility when it comes to securing physical infrastructure of the cloud?",
+    "options": {
+      "A": "The company does not have any responsibility when it comes to security in the cloud.",
+      "B": "The company shares responsibility with the cloud provider for securing the physical infrastructure.",
+      "C": "The company is fully responsible for securing all physical infrastructure of the cloud, including data centers.",
+      "D": "AWS is responsible for securing the physical infrastructure, and the company can focus on securing their data and applications within the cloud."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A large enterprise is looking to lower operational costs. They are hoping to reduce the operational overhead associated with managing their own physical infrastructure. Which choice BEST describes which advantage of the cloud this enterprise can benefit from?",
+    "options": {
+      "A": "Stop guessing capacity",
+      "B": "Increase speed and agility",
+      "C": "Benefit from massive economies of scale",
+      "D": "Stop spending money running and maintaining data centers"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A small business is considering migrating their IT infrastructure to the cloud. The finance team has a meeting with the IT department to discuss the costs associated with this transition. During the meeting, the finance manager says they like the idea of t he reliability that comes with the cloud, but they are worried about the fixed costs. Which statement accurately defines the cloud computing model and addresses the finance manager's concern?",
+    "options": {
+      "A": "Cloud computing is a model for delivering IT resources over the internet. Businesses can rent services on a pay -as-you -go basis, which can help reduce fixed costs and allow for more flexible budgeting. ---PAGE---",
+      "B": "Cloud computing involves purchasing dedicated servers and setting up a private data center. This model often comes with fixed costs related to hardware and maintenance.",
+      "C": "Cloud computing is basically just using someone else's server to host your website, and it does not offer any sort of significant cost advantages over traditional hosting solutions.",
+      "D": "Cloud computing reduces the need for additional hardware but still involves significant fixed monthly fees."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "How does Amazon EC2 Auto Scaling work in AWS?",
+    "options": {
+      "A": "Amazon EC2 Auto Scaling requires manual intervention to add or remove instances based on traffic.",
+      "B": "Amazon EC2 Auto Scaling adds instances when the workload is too high, but it does not scale down when demand decreases.",
+      "C": "Amazon EC2 Auto Scaling adjusts the instance type but does not change the number of instances.",
+      "D": "Amazon EC2 Auto Scaling automatically adds or removes instances based on performance data and application metrics."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A startup company is building a new web application and chooses general purpose Amazon EC2 instances to host the application. Why did they choose this instance type?",
+    "options": {
+      "A": "It provides the highest performance for compute -heavy tasks, such as video rendering or machine learning.",
+      "B": "It is designed for high storage capacity, which is needed to host large databases.",
+      "C": "It provides a balanced mix of compute, memory, and networking resources while keeping costs efficient as they scale their user base.",
+      "D": "It is specifically designed for memory -intensive applications, which is ideal for hosting a web application."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A startup company is building a new web application and chooses general purpose Amazon EC2 instances to host the application. Why did they choose this instance type? ---PAGE---",
+    "options": {
+      "A": "It provides the highest performance for compute -heavy tasks, such as video rendering or machine learning.",
+      "B": "It is designed for high storage capacity, which is needed to host large databases.",
+      "C": "It provides a balanced mix of compute, memory, and networking resources while keeping costs efficient as they scale their user base.",
+      "D": "It is specifically designed for memory -intensive applications, which is ideal for hosting a web application."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A manufacturing company is running a set of predictable workloads for the next 3 years and wants to optimize costs. Which option should they choose?",
+    "options": {
+      "A": "Reserved Instances",
+      "B": "On-Demand",
+      "C": "Dedicated Hosts",
+      "D": "Spot Instances"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A university research team is running climate modeling simulations that require substantial CPU power to process complex algorithms and analyze large datasets. Why are compute optimized Amazon EC2 instances ideal for this task?",
+    "options": {
+      "A": "They are designed for workloads that require a high amount of memory to process large datasets efficiently.",
+      "B": "They provide high storage throughput, making them ideal for tasks that require fast data retrieval and storage for large datasets.",
+      "C": "They are optimized for handling tasks that require hardware accelerators.",
+      "D": "They are ideal for tasks that require significant CPU power to perform computations."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "What does multi -tenancy refer to in the context of Amazon EC2?",
+    "options": {
+      "A": "Each EC2 instance running in its own private network",
+      "B": "EC2 instances dedicated to individual clients",
+      "C": "Multiple users sharing the same EC2 instance while maintaining isolation",
+      "D": "Instances that are restricted to one geographical region"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "---PAGE--- A software development company needs to notify the engineering team whenever a new bug is reported in their bug tracking system. Some team members need to be notified immediately, whereas others can process the bug reports later.  Which service should the software development company choose based on the requirements?",
+    "options": {
+      "A": "Elastic Load Balancing (ELB)",
+      "B": "Amazon EC2",
+      "C": "Amazon Simple Queue Service (Amazon SQS)",
+      "D": "Amazon Simple Notification Service (Amazon SNS)"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "Which option BEST describes how compute resources are provisioned and managed in the cloud?",
+    "options": {
+      "A": "Compute resources require constant manual management.",
+      "B": "Resources are provisioned based on demand, allowing for scaling and management.",
+      "C": "Compute resources are fixed and cannot be scaled.",
+      "D": "Resources must be pre -purchased and installed onsite."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "How do Amazon EC2 Auto Scaling and Elastic Load Balancing (ELB) work together in AWS?",
+    "options": {
+      "A": "Amazon EC2 Auto Scaling adjusts the number of instances, whereas ELB distributes traffic evenly across them.",
+      "B": "Amazon EC2 Auto Scaling handles traffic routing, whereas ELB manages instance scaling.",
+      "C": "ELB automatically scales the EC2 instances, and Amazon EC2 Auto Scaling adjusts traffic.",
+      "D": "They operate independently and are not connected."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "What happens if one component fails in a loosely coupled architecture? ---PAGE---",
+    "options": {
+      "A": "The system automatically switches to backup components without any intervention.",
+      "B": "The failure causes the entire system to fail.",
+      "C": "The system can continue to function as other components are independent.",
+      "D": "Other components must be manually restarted."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A media company is working on a project that involves rendering complex visual effects and simulations. The rendering process requires significant computational power and hardware accelerators to handle the intense workload efficiently. Which Amazon EC2 instance type would be the BEST choice for this task?",
+    "options": {
+      "A": "General purpose",
+      "B": "Accelerated computing",
+      "C": "Compute optimized",
+      "D": "Memory optimized"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A company has critical steady -state workloads and batch jobs that are not time - sensitive. How should they optimize costs using Amazon EC2 Savings Plans and Spot Instances?",
+    "options": {
+      "A": "Use Savings Plans for critical workloads and Spot Instances for jobs that are not time -sensitive to maximize savings.",
+      "B": "Use Savings Plans for all workloads and avoid Spot Instances because of interruption risks.",
+      "C": "Use Spot Instances for all workloads to maximize savings and avoid Savings Plans.",
+      "D": "Use Savings Plans for non -time -sensitive workloads and Spot Instances for critical jobs."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "What is the primary role of an Amazon Machine Image (AMI) when scaling applications?",
+    "options": {
+      "A": "It provides a consistent image to launch new instances.",
+      "B": "It stores backup copies of application data.",
+      "C": "It configures scaling policies for applications.",
+      "D": "It automatically manages network traffic."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "---PAGE--- Which tool can be used to interact with AWS services through a graphical user interface (GUI)?",
+    "options": {
+      "A": "AWS Command Line Interface (AWS CLI)",
+      "B": "AWS Software Development Kit (AWS SDK)",
+      "C": "AWS Management Console",
+      "D": "Amazon EC2"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A marketing agency is developing a new web application and expects steady growth, but is unsure of traffic in the early months. They want flexibility without a long -term commitment. Which pricing option should they use?",
+    "options": {
+      "A": "Spot Instances",
+      "B": "On-Demand",
+      "C": "Reserved Instances",
+      "D": "Savings Plans"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A pharmaceutical research company needs to run thousands of simulations to analyze protein folding. These compute -heavy tasks are run in parallel and do not require real - time interaction. The company wants the jobs to be automatically scheduled and scaled based on computing demand. Which AWS service BEST fits this workload?",
+    "options": {
+      "A": "AWS Batch",
+      "B": "AWS Elastic Beanstalk",
+      "C": "AWS Lambda",
+      "D": "Amazon Lightsail"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "Which scenario is the BEST fit for using AWS Lambda?",
+    "options": {
+      "A": "Automatically processing images as users upload them to an Amazon S3 bucket",
+      "B": "Running a large, high -performance computing workload that takes several hours to complete",
+      "C": "Running a relational database that needs complex queries and frequent connections",
+      "D": "Hosting a high -traffic web server that requires full control over the operating system (OS)"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "---PAGE--- What is the customer responsible for managing in a serverless service like AWS Lambda?",
+    "options": {
+      "A": "Nothing—AWS manages everything",
+      "B": "The application code",
+      "C": "The operating system, network configuration, and application stack",
+      "D": "The physical servers and networking hardware"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A developer is launching a new microservice and wants to focus only on writing and deploying code. They do not want to manage servers, handle scaling, or worry about infrastructure availability. Which AWS service model is BEST for this use case?",
+    "options": {
+      "A": "Unmanaged",
+      "B": "Serverless",
+      "C": "Hybrid cloud",
+      "D": "On premises"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A development team at a travel company has stored their hotel booking system’s container image in Amazon Elastic Container Registry (Amazon ECR) and is ready to deploy it. They need a service that can automatically start and stop containers based on traffi c, scale up or down with demand, and monitor the health of the system. Which service does the team need next?",
+    "options": {
+      "A": "An orchestration service like Amazon Elastic Container Service (Amazon ECS) or Amazon Elastic Kubernetes Service (Amazon EKS)",
+      "B": "Amazon EC2 with auto scaling",
+      "C": "A virtual machine to run the container manually",
+      "D": "AWS Lambda"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A development team at an e -commerce company is working on a new website. The application runs fine on their local machines, but when they attempt to deploy it to a staging environment, it does not work as expected. The team wants to make sure that the appl ication runs consistently across all development, testing, and production environments going forward. Which solution should the team use to make sure that the application runs the same across all environments? ---PAGE---",
+    "options": {
+      "A": "Set up separate environments for each operating system.",
+      "B": "Package the application in a container that includes all dependencies.",
+      "C": "Use Amazon EC2 to manually recreate the development environment.",
+      "D": "Use different versions of the applications for different environments."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A freelance developer is building a blog for a client with minimal traffic. They want a basic, cost -effective solution that includes storage and compute in one package, without having to deal with complex configurations or scaling concerns.  Which AWS service is the BEST fit?",
+    "options": {
+      "A": "AWS Lambda",
+      "B": "AWS Fargate",
+      "C": "AWS Batch",
+      "D": "Amazon Lightsail"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A company is launching a containerized photo application and has built the container image, which needs to be stored securely. They plan to use Kubernetes for orchestration and prefer not to manage any servers. Which combination of AWS services BEST fits their needs?",
+    "options": {
+      "A": "Amazon Elastic Container Registry (Amazon ECR), Amazon Elastic Container Service (Amazon ECS), and Amazon EC2",
+      "B": "Amazon Elastic Container Registry (Amazon ECR), Amazon Elastic Kubernetes Service (Amazon EKS), and AWS Fargate",
+      "C": "Amazon S3, Amazon Elastic Container Service (Amazon ECS), and Amazon EC2",
+      "D": "Amazon Elastic Container Registry (Amazon ECR), AWS Lambda, and Amazon EC2"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A team at a biomedical tech company is tasked with deploying a new medical application across multiple AWS Regions to help maintain high availability and fault tolerance. The application consists of several components, including a web server, a database, a nd a message queue. The deployment needs to be consistent and repeatable and should minimize manual errors through automation.  ---PAGE--- Which approach is BEST suited for deploying this application according to the needs of automation and consistency?",
+    "options": {
+      "A": "Writing a script to programmatically deploy the application using the cloud provider's API",
+      "B": "Using an Infrastructure as Code (IaC) service such as AWS CloudFormation to deploy the application",
+      "C": "Combining console and programmatic approaches for different tiers of the application",
+      "D": "Using the AWS Management Console to manually deploy each component in every Region"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "What BEST describes key benefits of using multiple AWS Regions and multiple Availability Zones? (Select TWO.)",
+    "options": {
+      "A": "Low latency for end users",
+      "B": "Faster database migration",
+      "C": "Increased storage capacity",
+      "D": "High availability and fault tolerance",
+      "E": "Enhanced security protocol"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "Which answer BEST describes the relationship between AWS Regions, Availability Zones, and edge locations?",
+    "options": {
+      "A": "AWS Regions are physical locations around the world where AWS has multiple Availability Zones. Each Availability Zone has one or more edge location.",
+      "B": "AWS Regions are physical locations around the world where AWS has multiple Availability Zones. Edge locations are located outside of AWS Regions and cache frequently accessed content.",
+      "C": "AWS Regions, Availability Zones, and edge locations are all the same thing and are used interchangeably.",
+      "D": "AWS Regions contain multiple edge locations, and each edge location can have one or more Availability Zones."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A nonprofit organization is migrating all of their resources to the AWS Cloud. They are trying to decide which AWS Region to deploy their resources to. Which option lists the factors the organization needs to consider when deciding where to place their cloud resources? ---PAGE---",
+    "options": {
+      "A": "Network speed, data encryption, user interface, and storage capacity",
+      "B": "Compliance, proximity to customers, feature availability, and pricing",
+      "C": "Server uptime, application performance, employee satisfaction, and office location",
+      "D": "Software licensing, hardware specifications, cloud skillset of staff, and customer reviews"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "Which answer BEST describes the purpose and benefits of AWS edge locations?",
+    "options": {
+      "A": "Edge locations are intended to provide redundant storage solutions for critical data.",
+      "B": "Edge locations are used exclusively for running compute -intensive applications and databases.",
+      "C": "Edge locations cache content to deliver data with lower latency and higher transfer speeds to end users.",
+      "D": "Edge locations are composed of physical data centers that host the majority of AWS services and applications."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "Which answer describes the key features and benefits of AWS CloudFormation?",
+    "options": {
+      "A": "CloudFormation is a cost -optimization tool that analyzes the AWS usage and recommends the best practices for reducing a company's AWS bills.",
+      "B": "CloudFormation is a service that provides a visual interface for manually configuring each AWS resource one by one, without the need for any code.",
+      "C": "With CloudFormation, users can cache frequently accessed content . That way, users experience lower latency when accessing cloud resources.",
+      "D": "With CloudFormation, users can model and set up their AWS resources using code to automate provisioning and the management of infrastructure. This method can help to reduce errors and maintain consistency across environments."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "What is the primary function of a domain name service (DNS)?",
+    "options": {
+      "A": "It filters inbound and outbound traffic to Amazon EC2 instances in a virtual private cloud (VPC).",
+      "B": "It provisions a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define.",
+      "C": "It translates human -readable domain names to machine readable IP addresses. ---PAGE---",
+      "D": "It allows you to create a subsection of a virtual private cloud (VPC) where you can isolate resources and control access."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "An enterprise customer just merged with another company and needs a way to quickly scale and provide a way for the new worldwide sales force to access their AWS resources. They want a fully managed service with advanced authentication for their new remote workers. Which solution would BEST meet their needs?",
+    "options": {
+      "A": "AWS PrivateLink",
+      "B": "AWS Client VPN",
+      "C": "AWS Site -to-Site VPN",
+      "D": "AWS Direct Connect"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A media company needs a service to manage their domain registrations with different providers. They will also be using the service to route internet traffic to their resources hosted both in the AWS Cloud and elsewhere. Which AWS solution would BEST meet their needs?",
+    "options": {
+      "A": "Amazon Route 53",
+      "B": "Amazon CloudFront",
+      "C": "AWS Direct Connect",
+      "D": "AWS Global Accelerator"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A company wants to establish a secure, private connection between their on -premises data center and their Amazon VPC to create a hybrid cloud architecture. Which component should they use to help ensure a secure connection?",
+    "options": {
+      "A": "Internet gateway",
+      "B": "Subnet",
+      "C": "Route table",
+      "D": "Virtual private gateway"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A customer is creating an Amazon VPC for their application. They want to create a private segment in the Amazon VPC so that resources launched can be isolated from users on the internet. ---PAGE--- Which network component would BEST meet their needs?",
+    "options": {
+      "A": "Either a public subnet or a private subnet would work",
+      "B": "An Availability Zone instead of a subnet",
+      "C": "A private subnet",
+      "D": "A public subnet"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A retail customer is hosting their application in an Amazon VPC and wants to configure traffic rules for the Amazon EC2 instances running in a public subnet. The application requires multiple rules to be defined at the instance level. Which solution or feature would meet their needs?",
+    "options": {
+      "A": "Set up network access control lists, (network ACLs) for the Amazon EC2 instances based on the application requirements.",
+      "B": "Set up security groups for the Amazon EC2 instances based on the application requirements.",
+      "C": "Set up a virtual private gateway based on the application requirements.",
+      "D": "Change the public subnet to a private subnet to avoid public internet access."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "What is networking in the AWS Cloud?",
+    "options": {
+      "A": "Interconnected devices that can exchange data and resources",
+      "B": "Logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define",
+      "C": "Physically isolated data centers or set of data centers within an AWS Region",
+      "D": "System that translates readable domain names to IP addresses"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A customer is exploring solutions to establish secure, encrypted connections between their on -premises networks at their data centers and branch offices. They are looking for the MOST cost -effective way to connect their office sites to other sites and thei r AWS services. They are not looking to increase the amount of bandwidth. Which solution would BEST meet their needs?",
+    "options": {
+      "A": "AWS PrivateLink",
+      "B": "AWS Site -to-Site VPN",
+      "C": "AWS Client VPN ---PAGE---",
+      "D": "AWS Direct Connect"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A financial customer needs a content delivery solution to deliver required training videos and static content to their financial consultants worldwide. They want to make sure the solution provides low latency. Which AWS solution would BEST meet their needs?",
+    "options": {
+      "A": "AWS Direct Connect",
+      "B": "Amazon CloudFront",
+      "C": "Amazon Route 53",
+      "D": "AWS Global Accelerator"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A customer is exploring edge networking services to improve application availability, performance, and security. They need a solution for traffic routing when something goes wrong in one of their application's locations. Specifically, it takes into account  the endpoint health, user location, and policies. Which AWS solution would BEST meet their needs?",
+    "options": {
+      "A": "AWS Direct Connect",
+      "B": "AWS Global Accelerator",
+      "C": "Amazon Route 53",
+      "D": "Amazon CloudFront"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "What is the primary function of an Availability Zone in the AWS Cloud?",
+    "options": {
+      "A": "It provisions a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define.",
+      "B": "It filters inbound and outbound traffic to EC2 instances in a VPC.",
+      "C": "It enhances application availability and fault tolerance by allowing resources to be deployed across multiple zones.",
+      "D": "It allows you to create a subsection of a virtual private cloud (VPC) where you can isolate resources and control access."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A customer is creating their application resources in their virtual private cloud (VPC) subnets. They want to secure their resources in the cloud, specifically the networking traffic protection tasks. ---PAGE--- Which component is the customer responsible for, based on the shared responsibility model?",
+    "options": {
+      "A": "Securing network traffic with the subnets and resources with Network access control lists (network ACLs) and security groups",
+      "B": "Securing the software that runs the AWS Cloud services",
+      "C": "Securing the hardware that runs the AWS Cloud services",
+      "D": "Securing access to the AWS data centers and facilities that run AWS Cloud services"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A customer is moving their application to an Amazon VPC and wants to setup a traffic control at the subnet level. They need broad control of traffic in and out and would like to use both allow and deny type rules. Which solution or feature would meet their needs?",
+    "options": {
+      "A": "Set up a virtual private gateway based on the application requirements.",
+      "B": "Change the public subnet to a private subnet to avoid public internet access.",
+      "C": "Use network access control lists (network ACLs).",
+      "D": "Use security groups."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  }
+]

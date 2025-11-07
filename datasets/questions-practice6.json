@@ -1,0 +1,413 @@
+[
+  {
+    "question": "A customer is moving from on premises to the cloud and has decided to use the Bring Your Own License model (BYOL) approach for cost savings. They are concerned about managing the licenses, want a way to reduce the risk of noncompliance, and want to enforce  license usage limits. Which solution would best meet their needs?",
+    "options": {
+      "A": "AWS Control Tower",
+      "B": "AWS Service Catalog",
+      "C": "AWS License Manager",
+      "D": "AWS Organizations"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "---PAGE--- A research customer with a large team of developers needs a way to ensure specific configuration guidelines for the developers when creating AWS resources. They want a way to assess and audit the AWS resources to ensure that the team is using the most cost -effective approved list of compute resources. Which solution or feature would meet their needs?",
+    "options": {
+      "A": "AWS Audit Manager",
+      "B": "AWS CloudTrail",
+      "C": "AWS Artifact",
+      "D": "AWS Config"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "Where can customers go to find resources on AWS compliance —for example, information on customer compliance stories, answers to key compliance questions, and an auditing security checklist?",
+    "options": {
+      "A": "AWS Organizaitons",
+      "B": "AWS Management Console",
+      "C": "Customer Compliance Center",
+      "D": "AWS Artifact"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A sportswear company is hosting their application on Amazon EC2 instances. They want to collect metrics on their EC2 instances and they would like notifications when utilization passes thresholds. They also want to have an action configured to automate sca ling up the number of EC2 instances when utilization surpasses their threshold. Which AWS service would best meet their needs?",
+    "options": {
+      "A": "AWS Artifact",
+      "B": "Amazon CloudWatch",
+      "C": "AWS CloudTrail",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A customer is using AWS Organizations to centrally manage their company's accounts for billing to optimize and organize costs. They want to set up rules or restrictions on the AWS services, resources, and individual API actions that the users can access. Which feature would meet their needs?",
+    "options": {
+      "A": "A service control policy (SCP)",
+      "B": "An AWS Identity and Access Management (IAM) user",
+      "C": "A root account",
+      "D": "An organizational unit (OU)"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "---PAGE--- Which AWS service provides a no -cost, on -demand access to AWS security and compliance reports and select online agreements?",
+    "options": {
+      "A": "AWS Trusted Advisor",
+      "B": "AWS Artifact",
+      "C": "AWS CloudTrail",
+      "D": "Amazon CloudWatch"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "What is the purpose of an AWS Control Tower landing zone?",
+    "options": {
+      "A": "It is a subsection of a virtual private cloud (VPC) where you can isolate resources and control access.",
+      "B": "It is the enterprise -wide container that holds all your organizational units (OUs), accounts, users, and resources that you want to regulate for compliance.",
+      "C": "It filters inbound and outbound traffic to Amazon EC2 instances in a virtual private cloud (VPC).",
+      "D": "It is a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A financial company with a hybrid cloud solution wants to track changes made to their AWS resources both in the cloud and on premises. Specifically, they want to know who did what, and when. Which AWS service would best meet their needs?",
+    "options": {
+      "A": "AWS Trusted Advisor",
+      "B": "Amazon CloudWatch",
+      "C": "AWS Artifact",
+      "D": "AWS CloudTrail"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "An enterprise customer has grown rapidly and is struggling to manage billing of their AWS resources and accounts. Every employee has created independent accounts with no centralized management or hierarchical groupings of accounts. The customer wants to ro ll up billing and centralize management into organizational units. Which AWS service would best meet this customer's need?",
+    "options": {
+      "A": "An Availability Zone (AZ)",
+      "B": "AWS Trusted Advisor",
+      "C": "AWS Service Catalog",
+      "D": "AWS Organizations"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "You are the chief technology officer of a large enterprise with mission -critical applications running on AWS. Your organization requires the highest level of ---PAGE--- support, including response times of 15 minutes or less when mission -critical systems are down. Which AWS support plan should you choose?",
+    "options": {
+      "A": "Developer Support",
+      "B": "Basic Support",
+      "C": "Business Support",
+      "D": "Enterprise Support"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "Which option BEST describes a key benefit of being an AWS Partner?",
+    "options": {
+      "A": "AWS Partner Funding benefits",
+      "B": "Dedicated AWS hardware",
+      "C": "Early access to all AWS services",
+      "D": "Exclusive access to all AWS Training and Certification"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A global finance company currently has their information technology (IT) resources on-premises and is evaluating the AWS Cloud. The company is used to fixed capital expenditures and wants to understand how they would pay by moving to the AWS Cloud.  Which choices BEST describe how customers pay for AWS? (Select THREE.)",
+    "options": {
+      "A": "Save by using fixed expenses",
+      "B": "Sign fixed contracts",
+      "C": "Pay less by using more",
+      "D": "Pay all upfront",
+      "E": "Save when you commit F. Pay as you go"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "An EdTech company is considering moving their education application to the cloud. The company's chief financial officer (CFO) wants to understand how AWS services are priced and which factors will drive their cost. Although pricing varies based on several factors, which options are the fundamental drivers of cost with AWS? (Select THREE.)",
+    "options": {
+      "A": "Security",
+      "B": "Compute",
+      "C": "Support",
+      "D": "Inbound data transfer",
+      "E": "Outbound data transfer F. Storage"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "Which option  BEST describes the role of the AWS Partner Network (APN)? ---PAGE---",
+    "options": {
+      "A": "Developing new AWS services and features",
+      "B": "Offering certification for AWS users",
+      "C": "Providing customer support for AWS users",
+      "D": "Helping businesses build, market, and sell solutions based in AWS"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "In addition to AWS Support Plans and other technical assistance options, AWS also provides access to self -support resources. Which options do AWS customers have available as self -support resources? (Select THREE.)",
+    "options": {
+      "A": "AWS solutions architects",
+      "B": "AWS Professional Services",
+      "C": "AWS Documentation, such as user guides for AWS services",
+      "D": "AWS Blog",
+      "E": "AWS Trust and Safety Center F. SDK guides"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "You are the technical lead for a mid -sized e -commerce company and are evaluating various support options for your AWS infrastructure. Your current challenges include optimizing database performance and incident response planning. You are also seeking techn ical consulting on best practices for security. Outside of standard AWS Support Plans, which support option is the BEST choice for getting advice on best practices for security and for conducting a security audit of your AWS environment?",
+    "options": {
+      "A": "AWS Trust and Safety Team",
+      "B": "AWS Professional Services",
+      "C": "AWS Basic Support",
+      "D": "AWS re:Post"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "An online retail company is interested in moving forward with the migration of an application, but they would like to estimate costs before diving in. Which tool or service can they use to estimate the cost of the specific AWS services and configurations that they need?",
+    "options": {
+      "A": "AWS Organizations is a service that the company can use to centrally manage and govern their environment as they grow and scale their AWS resources.",
+      "B": "AWS Cost Explorer is a tool that the company can use to view and analyze their costs and usage.",
+      "C": "AWS Pricing Calculator is a web -based tool that the company can use to configure cost estimates for their unique business needs.",
+      "D": "With AWS Budgets , the company can monitor their aggregate utilization and coverage metrics. ---PAGE---"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A large enterprise wants to find compliance -ready software solutions to make sure they meet industry regulations. They are exploring AWS services to help with this, and they want to implement the solution as quickly as possible. What option is the BEST fit for this enterprise and their requirements?",
+    "options": {
+      "A": "Develop custom solutions in -house.",
+      "B": "Use self -support tools such as AWS Documentation.",
+      "C": "Find compliance -ready solutions in the AWS Marketplace.",
+      "D": "Use AWS Shield to protect against distributed denial of service (DDoS) attacks."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "You are part of a team that wants to monitor and manage costs of multiple AWS accounts across different departments within your organization. Which AWS service can you use to effectively manage and consolidate billing information for these accounts?",
+    "options": {
+      "A": "AWS Budgets",
+      "B": "AWS Organizations",
+      "C": "AWS Cost Explorer",
+      "D": "AWS Billing and Cost Management dashboard"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A retail company is just getting starting with their migration to the AWS Cloud. They need help building a business case to secure funding from their chief financial officer (CFO) and stakeholders. Which migration service would BEST meet their needs?",
+    "options": {
+      "A": "Migration Evaluator",
+      "B": "AWS Application Discovery Service",
+      "C": "AWS Application Migration Service",
+      "D": "AWS Migration Hub"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "An engineering company is migrating large amounts of proprietary intellectual property design files from their on -premises data center to the AWS Cloud. They want a service that has fully managed support for secure file transfers with several different pro tocols, like Secure File Transfer Protocol (SFTP) and File Transfer Protocol Secure (FTPS) Which online migration solution would meet their needs?",
+    "options": {
+      "A": "AWS Snowball Edge Storage Optimized Devices",
+      "B": "AWS Direct Connect",
+      "C": "AWS Transfer Family",
+      "D": "AWS DataSync"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "---PAGE--- A credit card company is migrating large amounts of sensitive data from their on - premises storage to the AWS Cloud. They want to automate the process and schedule the migration during off peak times. They also want to be able to check on progress and task reporting. They do not have a dedicated private connection between their data center and the AWS Cloud. Which online migration solution would meet their needs?",
+    "options": {
+      "A": "AWS DataSync",
+      "B": "AWS Transfer Family",
+      "C": "AWS Snowball Edge Storage Optimized Devices",
+      "D": "Virtual private gateway"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "What are the seven migration strategies that are commonly used when customers migrate to the AWS Cloud?",
+    "options": {
+      "A": "Relocate, Remediate, Retrofit, Refactor, Regrade, Retool, Remove",
+      "B": "There are not seven, there are three (Assess, Mobilize, and Migrate and Modernize)",
+      "C": "Business, People, Governance, Platform, Security, Operations, IT",
+      "D": "Relocate, Rehost, Replatform, Refactor, Repurchase, Retain, and Retire"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "An environmental agency is migrating their applications to the AWS Cloud. During the migration they also want to look for ways to modernize and reduce costs of their applications. Which migration service would BEST meet their needs?",
+    "options": {
+      "A": "AWS Application Discovery Service",
+      "B": "AWS Migration Hub",
+      "C": "AWS Application Migration Service",
+      "D": "Migration Evaluator"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "During their upcoming migration, the database administrator would like to move from their current database to an AWS managed database to offload some of the database administration. They would also like to use a tool to plan, assess, convert, and migrate t he database. Which migration solution would BEST meet their needs?",
+    "options": {
+      "A": "AWS Migration Hub",
+      "B": "AWS Database Migration Service (AWS DMS)",
+      "C": "AWS Schema Conversion Tool (AWS SCT)",
+      "D": "Migration Evaluator"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A media company is in the migrate and modernize phase of their migration and wants a centralized location to view their migration tasks and progress. ---PAGE--- Which migration service would BEST meet their needs?",
+    "options": {
+      "A": "Migration Evaluator",
+      "B": "AWS Application Migration Service",
+      "C": "AWS Application Discovery Service",
+      "D": "AWS Migration Hub"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "The migration team wants to make sure the organization considers a company -wide change management strategy for successful cloud adoption. Which Cloud Adoption Framework (CAF) perspective would they use?",
+    "options": {
+      "A": "Business",
+      "B": "Security",
+      "C": "Operations",
+      "D": "People"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "What is the primary function of the AWS Cloud Adoption Framework (AWS CAF)?",
+    "options": {
+      "A": "It is also known as the seven Rs or the seven migration strategies.",
+      "B": "It acts as a centralized hub to manage a company's migration to the AWS Cloud.",
+      "C": "It migrates on -premises databases and data to the AWS Cloud.",
+      "D": "It provides tools to help accelerate the migration journey, organize resources, and align management during the transition."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A startup is hosting a critical web application on a single Amazon EC2 instance in one Availability Zone. After a brief outage, they decide to reevaluate their architecture. What practice from the AWS Well -Architected Framework could improve this situation?",
+    "options": {
+      "A": "Scale up the instance to handle more traffic (Performance Efficiency).",
+      "B": "Increase the instance’s firewall protection (Security).",
+      "C": "Deploy instances across multiple Availability Zones for fault tolerance (Reliability).",
+      "D": "Reduce resource usage to avoid overprovisioning (Cost Optimization)."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A manufacturing company needs a way to monitor its assembly -line equipment for any performance issues. Which AWS service can help them build a monitoring solution for the equipment?",
+    "options": {
+      "A": "AWS Well -Architected Tool",
+      "B": "Amazon Connect",
+      "C": "Amazon AppStream 2.0",
+      "D": "AWS IoT Core ---PAGE---"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A developer is working on a full -stack application hosted on AWS. They are interested in streamlining the development process by quickly adding features like authentication and storage with minimal infrastructure management. Which AWS service would provide the best solution for the developer's needs?",
+    "options": {
+      "A": "AWS Amplify",
+      "B": "AWS CodePipeline",
+      "C": "AWS Well -Architected Tool",
+      "D": "AWS AppSync"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "The owner of a large hardware company wants to automate and optimize the company’s marketing emails to enhance customer engagement. Which AWS service would work well for this use case?",
+    "options": {
+      "A": "Amazon Connect",
+      "B": "AWS Amplify",
+      "C": "Amazon AppStream 2.0",
+      "D": "Amazon Simple Email Service (Amazon SES)"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A company is using a large Amazon EC2 instance type for a low -traffic website, but monitoring shows CPU usage rarely exceeds 10 percent. What is a good next step?",
+    "options": {
+      "A": "Decrease the number of instances to save money.",
+      "B": "Automate the scaling of EC2 instances based on traffic.",
+      "C": "Rightsize the EC2 instance to a smaller type to match the actual workload.",
+      "D": "Upgrade the EC2 instance for better data protection."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A small technology startup needs to provide its remote workforce with secure access to their work environment. The employees must be able to accomplish the same tasks as if they were on a physical office computer. Which AWS service can they use to provide this remote access?",
+    "options": {
+      "A": "Amazon AppStream 2.0",
+      "B": "Amazon Connect",
+      "C": "Amazon WorkSpaces",
+      "D": "AWS AppSync  ---PAGE---"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  }
+]

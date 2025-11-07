@@ -1,0 +1,604 @@
+[
+  {
+    "question": "A customer wants a way to establish a dedicated connection from their on -premises network to an Amazon VPC. They need a solution that provides a more consistent network experience with increased bandwidth. Which type of connection to the AWS Cloud would BEST meet their needs?",
+    "options": {
+      "A": "Internet gateway",
+      "B": "Virtual private gateway",
+      "C": "Amazon CloudFront",
+      "D": "AWS Direct Connect"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "Which statement BEST describes Amazon Elastic File System (Amazon EFS)?",
+    "options": {
+      "A": "A fully managed, elastic file system that scales automatically as files are added and removed",
+      "B": "A fixed -capacity file storage system that requires manual scaling and management ---PAGE---",
+      "C": "A block storage service that provides volumes to attach to single Amazon EC2 instance",
+      "D": "An object storage service designed for long -term archival of rarely accessed data"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "Which statement BEST describes AWS Storage Gateway?",
+    "options": {
+      "A": "A hybrid cloud storage solution that provides on -premises applications with access to virtually unlimited cloud storage",
+      "B": "A migration tool that automatically transfers all on -premises data to the cloud",
+      "C": "A physical hardware appliance that must be installed in a data center",
+      "D": "A virtual private network that creates secure connections between a data center and AWS"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "AnyCompany Software is deploying a critical production application on Amazon EC2 instances with several Amazon Elastic Block Store (Amazon EBS) volumes containing application code and customer data. The team is looking for an AWS service they can use to ba ck up the data for their application. The solution needs to meet the following criteria: • Create regular data backups. • Create duplicate environments for testing. • Create a disaster recovery strategy. • Create full or incremental backups without impacting application performance. • Provide cost -effective for long -term storage. Which AWS service or feature would BEST meet the requirements in the scenario?",
+    "options": {
+      "A": "Amazon Elastic File System (Amazon EFS)",
+      "B": "Amazon FSx",
+      "C": "EBS snapshots",
+      "D": "Amazon S3 Glacier Flexible Retrieval"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "Which statement BEST describes Amazon S3?",
+    "options": {
+      "A": "A block -level storage service that provides persistent storage for Amazon EC2 instances.",
+      "B": "A storage service primarily designed for long -term archival and backup of data that is rarely accessed. ---PAGE---",
+      "C": "A scalable object storage service that is used to store and retrieve any amount of data from anywhere on the web.",
+      "D": "A file storage service that provides a traditional file system interface for sharing files between multiple instances."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "What is the primary function of Amazon S3 storage classes?",
+    "options": {
+      "A": "To organize objects within buckets hierarchically",
+      "B": "To provide different storage options optimized for different use cases and access patterns",
+      "C": "To replicate data across multiple AWS Regions automatically",
+      "D": "To encrypt data at rest and in transit"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "AnyCompany Technology needs to implement a centralized storage solution for their development team that allows multiple Amazon EC2 instances to access the same file system simultaneously.  The solution needs to meet the following criteria:  Provide a fully managed service.  Automatically scale.  Eliminate the need for capacity planning.  Support Linux -based applications with standard file system interfaces.  Maintain consistent low -latency access across development environments.  Provide high durability without requiring complex replication setups.  Which AWS storage service is BEST suited for this scenario?",
+    "options": {
+      "A": "Amazon FSx",
+      "B": "Amazon Elastic File System (Amazon EFS)",
+      "C": "Amazon S3",
+      "D": "Amazon Elastic Block Storage (Amazon EBS)"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "---PAGE--- AnyCompany Marketing needs a storage solution that they can use to distribute large collections of high -resolution images, videos, and design files for their clients' campaigns. Some assets are accessed frequently, whereas others are archived for occasiona l reference.  The solution needs to meet the following criteria:  Unlimited storage capacity  High durability  Easy file sharing through URLs  Ability to organize assets by client and project  Cost -efficient storage options  Security controls to prevent unauthorized access for specific assets  Which AWS service is BEST suited for the storage needs described in this scenario?",
+    "options": {
+      "A": "Amazon Elastic Block Storage (Amazon EBS)",
+      "B": "Amazon FSx",
+      "C": "Amazon S3",
+      "D": "Amazon Elastic File System (Amazon EFS)"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "AnyCompany AI is developing a machine learning application that requires extremely fast data processing for temporary model training datasets. The data is generated during training sessions and stored separately in persistent storage. The team is trying to determine the best storage solution to use alongside their application.  The solution needs to meet the following criteria:  Highest possible I/O performance  Directly attached to their Amazon EC2 instances  Temporary storage – data does not persist when instances are stopped or terminated  ---PAGE--- Which AWS service BEST meets the temporary storage needs described in this scenario?",
+    "options": {
+      "A": "Amazon Elastic Block Store (Amazon EBS)",
+      "B": "Amazon Elastic File System (Amazon EFS)",
+      "C": "Amazon EC2 instance store",
+      "D": "Amazon S3"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "Which statement BEST describes AWS Elastic Disaster Recovery?",
+    "options": {
+      "A": "A service that automatically scales computing capacity based on workload demands during disaster events",
+      "B": "A service that minimizes downtime and data loss by providing fast, reliable recovery of on -premises and cloud -based applications using affordable storage, minimal compute, and point -in-time recovery",
+      "C": "A managed database service that provides automated backups and cross - Region replication",
+      "D": "A backup service that creates periodic snapshots of AWS resources and stores them in Amazon S3 buckets"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "AnyCompany Manufacturing maintains a large amount of engineering drawings and design files that their teams need to access daily from their on -premises applications. They want to gradually migrate these files to AWS to reduce their local storage costs whil e maintaining low -latency access for frequently used files. The solution needs to meet the following criteria: • Integrate with existing file -based workflows. • Provide a seamless path to cloud storage without disrupting current operations. • Maintain local, low -latency access to frequently used files. Which AWS storage service should they use based on these requirements?",
+    "options": {
+      "A": "Amazon S3 Glacier Flexible Retrieval",
+      "B": "Amazon FSx for Windows File Server",
+      "C": "Amazon Elastic File System (Amazon EFS)",
+      "D": "AWS Storage Gateway – File Gateway"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "Which statement BEST describes Amazon Elastic Block Store (Amazon EBS)? ---PAGE---",
+    "options": {
+      "A": "A block -level storage service that provides persistent storage volumes for Amazon EC2 instances",
+      "B": "A temporary storage option that is lost when an instance is stopped or terminated",
+      "C": "A file storage system that allows multiple instances to access the same data simultaneously",
+      "D": "An in -memory cache used to improve database performance"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "AnyCompany Commerce has recently migrated its main application to an Amazon EC2 instance in AWS. As their customer base expands, they are exploring storage solutions that can grow dynamically with the application's data needs. The solution needs to meet the following criteria: • Have persistent block storage that provides consistent low -latency performance. • Be able to be attached to and detached from the EC2 instance as needed. • Independently resize storage capacity without disrupting the instance. • Create point -in-time backups to protect critical customer and inventory data. Which AWS storage service would BEST meet the requirements in the scenario?",
+    "options": {
+      "A": "Amazon FSx",
+      "B": "Amazon Elastic File System (Amazon EFS)",
+      "C": "Amazon S3",
+      "D": "Amazon Elastic Block Store (Amazon EBS)"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "Which statement BEST describes Amazon FSx?",
+    "options": {
+      "A": "An object storage solution designed for archiving rarely accessed data",
+      "B": "A fully managed service that provides cost -effective, scalable file storage built on widely used file systems",
+      "C": "A service used to set up private file sharing within an on -premises data center only",
+      "D": "A block storage service that provides high performance volumes for EC2 instances"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "---PAGE--- AnyCompany Marketing needs to migrate their existing file shares to AWS to support their design teams who work with large creative files. They need help choosing a storage solution that can facilitate this migration. The solution needs to meet the following requirements: • Provide a fully managed service. • Seamlessly integrate with Windows applications. • Support SMB protocol. • Offer Active Directory integration for user authentication. • Support data deduplication to optimize storage costs. • Provide consistent sub -millisecond latencies. • Provide high availability. Which AWS storage service BEST meets the requirements described in the scenario?",
+    "options": {
+      "A": "Amazon FSx for Windows File Server",
+      "B": "Amazon Elastic File System (Amazon EFS)",
+      "C": "Amazon S3",
+      "D": "Amazon Storage Gateway"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "What is a key characteristic of Amazon S3 storage classes pricing?",
+    "options": {
+      "A": "All storage classes cost the same but differ in retrieval speed.",
+      "B": "Pricing is exclusively determined by the geographic region of the bucket.",
+      "C": "Pricing varies based on storage costs, retrieval fees, and minimum storage durations.",
+      "D": "All storage classes have the same minimum storage duration requirement."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "What is a primary benefit of using Amazon ElastiCache?",
+    "options": {
+      "A": "Improved application performance through in -memory caching",
+      "B": "Built -in machine learning capabilities for data analysis",
+      "C": "Automatic scaling of underlying database storage",
+      "D": "Complete replacement for relational databases"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "---PAGE--- Which option describes a scenario where an unmanaged solution like a database installed directly onto an Amazon EC2 instance would be preferable to using a fully managed AWS database service?",
+    "options": {
+      "A": "A developer has a database size smaller than the maximum limits imposed by Amazon RDS.",
+      "B": "A developer wants to scale a database instance based on workload patterns without worrying about licensing complications.",
+      "C": "A developer wants AWS to handle routine database maintenance tasks like backups and patching.",
+      "D": "A developer needs full control over the database and access to its underlying operating system, database installation, and configuration."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "Which definition BEST describes in -memory caching?",
+    "options": {
+      "A": "A cloud -based service that stores data in memory for fast access, improving application performance and scalability while reducing database load",
+      "B": "A networking solution that optimizes internet routing paths to reduce latency between user requests and cloud -based applications",
+      "C": "A backup and recovery service that automatically creates snapshots of critical data every five minutes to prevent data loss",
+      "D": "A database management system that permanently stores all application data on solid -state drives for consistent retrieval speeds"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "What is the primary way that NoSQL databases like Amazon DynamoDB differ from relational databases?",
+    "options": {
+      "A": "Relational databases provide automatic scaling and NoSQL databases require manual scaling.",
+      "B": "Relational databases offer better performance for transactional workloads than any NoSQL solution.",
+      "C": "Relational databases require indexes on all queries, and NoSQL databases do not use indexes.",
+      "D": "NoSQL databases use flexible schema designs rather than the rigid table structures of relational databases."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "---PAGE--- What is a practical use case for Amazon DocumentDB (with MongoDB compatibility)?",
+    "options": {
+      "A": "Running high -performance transactional banking applications with strict compliance requirements",
+      "B": "Storing and managing a large product catalog for an ecommerce application",
+      "C": "Long -term archival storage of historical data with infrequent access patterns",
+      "D": "Real-time in -memory caching of web session data"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "Which statement BEST describes Amazon DynamoDB?",
+    "options": {
+      "A": "DynamoDB is a fully managed NoSQL key -value and document database that provides fast, predictable performance with seamless scalability.",
+      "B": "DynamoDB is a column -oriented database that requires schema definition before storing data.",
+      "C": "DynamoDB is a relational database service that provides complex SQL query capabilities.",
+      "D": "DynamoDB is a fully managed graph database that requires server maintenance during scheduled downtime."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "Which problem does AWS Database Migration Service (AWS DMS) solve?",
+    "options": {
+      "A": "Minimizing application downtime during database migrations",
+      "B": "Creating automated database backup schedules",
+      "C": "Providing a graphical interface for database administrators to design tables",
+      "D": "Optimizing SQL queries to improve database performance"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "Which statement describes the responsibilities of customers using fully managed AWS database services?",
+    "options": {
+      "A": "Customers are responsible for monitoring and generating metrics for their data.",
+      "B": "Customers are responsible for deploying and managing antivirus solutions on the operating systems of fully managed database services.",
+      "C": "Customers are responsible for designing data structures and managing access controls.",
+      "D": "Customers are responsible for provisioning, scaling, patching, and backups."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "---PAGE--- What is a possible use  case for Amazon Aurora?",
+    "options": {
+      "A": "Running temporary databases with minimal availability requirements for development environments",
+      "B": "Replacing high -cost commercial database engines with a more cost -effective solution that still provides enterprise -level performance and reliability",
+      "C": "Processing unstructured data streams in real time without relational database constraints",
+      "D": "Storing static, rarely accessed data that requires minimal processing capabilities"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "What is a practical use of Amazon Neptune?",
+    "options": {
+      "A": "Managing and querying highly connected datasets efficiently",
+      "B": "Replacing traditional SQL databases for all workloads",
+      "C": "Providing real -time streaming analytics",
+      "D": "Optimizing text search in large document databases"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "What is a feature of AWS Backup?",
+    "options": {
+      "A": "AWS Backup provides centralized backup policies and monitoring across multiple AWS accounts and Regions.",
+      "B": "AWS Backup can only back up resources within a single AWS Region.",
+      "C": "AWS Backup is limited to database services only.",
+      "D": "AWS Backup requires manual configuration for each individual resource."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "Which explanation BEST describes Amazon RDS?",
+    "options": {
+      "A": "A fully managed service that helps set up, operate, and scale relational databases in the cloud",
+      "B": "A NoSQL database system optimized for unstructured data",
+      "C": "A fully managed in -memory caching service that seamlessly integrates with Redis, Valkey, or Memcached",
+      "D": "A data warehousing solution for analytical processing"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "Data can come from many different sources. To provide insights, the data must be consolidated in a single location. There are two storage options for this. Data lakes store vast amounts of raw data, and data warehouses are optimized for business intelligen ce. Which AWS services are typically used as a data lake and data warehouse? ---PAGE---",
+    "options": {
+      "A": "Amazon S3 is a popular choice for data lakes, whereas Amazon Redshift is a data warehouse service.",
+      "B": "Amazon Redshift is a popular choice for data lakes, whereas Amazon S3 is a data warehouse service.",
+      "C": "Amazon S3 is a popular choice for data lakes, whereas Amazon Athena is a data warehouse service.",
+      "D": "Amazon EMR is a popular choice for data lakes, whereas Amazon Redshift is a data warehouse service."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "Generative AI is a type of deep learning powered by extremely large machine learning (ML) models known as foundation models (FMs). What are characteristics of FMs? (Select TWO.)",
+    "options": {
+      "A": "FMs are trained to perform singular tasks.",
+      "B": "FMs are only used to create images.",
+      "C": "FMs are programmed with explicit rules.",
+      "D": "FMs are pre -trained on vast collections of data.",
+      "E": "FMs can be adapted to perform multiple tasks."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "Which AWS service can be used to build, train, and deploy a customized machine learning (ML) model without worrying about the underlying infrastructure?",
+    "options": {
+      "A": "Amazon Comprehend",
+      "B": "Amazon Personalize",
+      "C": "Amazon EMR",
+      "D": "Amazon SageMaker AI"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "An e -commerce company wants to add a product recommendation engine to its online application to increase sales. The development team wants the recommendations to be relevant for each individual customer. Which pre -built AWS AI service would work well for this use case?",
+    "options": {
+      "A": "Amazon Comprehend",
+      "B": "Amazon Personalize",
+      "C": "Amazon Lex",
+      "D": "Amazon Kendra  ---PAGE---"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A small development team is looking to add a feature to its application that converts text to speech. Which pre -built AWS AI service can be used for this task?",
+    "options": {
+      "A": "Amazon Personalize",
+      "B": "Amazon Comprehend",
+      "C": "Amazon Textract",
+      "D": "Amazon Polly"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "Both classical programming and machine learning can be used to train computers to perform tasks. What is the main difference between the two approaches?",
+    "options": {
+      "A": "Classical programming creates explicit rules for the computer to follow. In machine learning, computers make predictions using patterns learned from historical data.",
+      "B": "Classical programming is used for mathematical operations, whereas machine learning is exclusively used for pattern recognition in images and text.",
+      "C": "Classical programming requires more computational resources than machine learning, making it less efficient for complex tasks.",
+      "D": "Classical programming is used for simple tasks, whereas machine learning is reserved for extremely complex tasks."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "The extract, transform, load (ETL) process is often used to provide clean and accessible data in a format that is usable by analytics tools and AI algorithms. How does a data pipeline improve this process?",
+    "options": {
+      "A": "Data pipelines increase the amount of raw data collected.",
+      "B": "Data pipelines reduce the variety of data sources used by ETL.",
+      "C": "Data pipelines eliminate the need for data transformations.",
+      "D": "Data pipelines make the ETL process more efficient and repeatable."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "Amazon Bedrock is a fully managed service that was specifically designed for working with large foundation models (FMs) and building generative AI applications. What does the service provide to access FMs from Amazon and leading AI startups? ---PAGE---",
+    "options": {
+      "A": "Free, unlimited use",
+      "B": "A single API",
+      "C": "An open source repository",
+      "D": "Dedicated cloud storage"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A financial services company is developing an application to analyze real -time stock data so its team of analysts can make immediate trading decisions. The company needs to ingest real -time stock market data without worrying about servers or scaling capaci ty. Which AWS service would meet their needs?",
+    "options": {
+      "A": "Amazon Kinesis Data Streams",
+      "B": "Amazon EMR",
+      "C": "Amazon QuickSight",
+      "D": "Amazon Athena"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A large healthcare organization wants to improve employee productivity. The company is searching for a pre -built generative AI assistant that can answer questions, help solve problems, and take actions using the data and expertise found in its information repositories. Which AWS service would work well for this use case?",
+    "options": {
+      "A": "Amazon SageMaker JumpStart",
+      "B": "Amazon Q Business",
+      "C": "Amazon Q Developer",
+      "D": "Amazon Bedrock"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A security team for a large ecommerce company needs a centralized way to create and manage the encryption keys that protect its data on AWS. Which of these services is the BEST fit for this team?",
+    "options": {
+      "A": "Amazon Macie",
+      "B": "AWS Certificate Manager (ACM)",
+      "C": "AWS Key Management Service (AWS KMS)",
+      "D": "AWS WAF  ---PAGE---"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A security team for a large software development company needs to check multiple applications for security vulnerabilities and deviations from security best practices. The applications are running on Amazon EC2, AWS Lambda, and in containers. Which AWS service should they choose for the security assessments?",
+    "options": {
+      "A": "Amazon Detective",
+      "B": "Amazon GuardDuty",
+      "C": "Amazon Inspector",
+      "D": "AWS Security Hub"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A large marketing firm has a standard set of permissions used to grant designers access to certain Amazon S3 buckets. The firm added a new S3 bucket that all designers need to access. Which AWS Identity and Access Management (IAM) control can the firm use to assign permissions that will be inherited by all of its designers?",
+    "options": {
+      "A": "IAM user",
+      "B": "IAM role",
+      "C": "IAM group",
+      "D": "IAM policy"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "All AWS accounts are given an AWS account root user. The root user is the account owner and has full permissions to perform any actions. What are some ways to protect this powerful account? (Select TWO.)",
+    "options": {
+      "A": "Associate a strong password with the account.",
+      "B": "Delegate root user access to others.",
+      "C": "Create multiple root users for redundancy.",
+      "D": "Turn on multi -factor authentication (MFA).",
+      "E": "Delete the root user after setting up AWS Identity and Access Management (IAM) users."
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "What is the responsibility of AWS under the AWS shared responsibility model?",
+    "options": {
+      "A": "Managing physical security of data centers",
+      "B": "Configuring security groups for Amazon EC2 instances",
+      "C": "Encrypting customer data at rest ---PAGE---",
+      "D": "Setting up AWS Identity and Access Management (IAM) roles and policies"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A technology company is moving some of its resources to AWS. The company wants to provide single sign -on access for its employees on AWS using its existing identity source. Which service can help the company accomplish this?",
+    "options": {
+      "A": "AWS Identity and Access Management (IAM)",
+      "B": "AWS IAM Identity Center",
+      "C": "AWS Systems Manager",
+      "D": "AWS Secrets Manager"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "An employee wants to check their company’s online employee portal to see how many vacation hours they have accrued. Before accessing their personal records, they enter their username and password to log in to the site. What happens during this login process?",
+    "options": {
+      "A": "Authentication",
+      "B": "Encryption",
+      "C": "Detection",
+      "D": "Authorization"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "Protecting sensitive customer data is a vital component of maintaining customer trust. This involves encrypting data at rest and in transit. What is used to encrypt data in transit?",
+    "options": {
+      "A": "Strong passwords",
+      "B": "Multi -factor authentication (MFA)",
+      "C": "Cryptographic keys",
+      "D": "SSL/TLS certificates"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A small financial services company recently moved its online resources to AWS. The security team was concerned about protection from common, frequently occurring types of distributed denial of service (DDoS) attacks. Which  AWS service automatically protects customers at no cost from DDoS attacks?",
+    "options": {
+      "A": "AWS Systems Manager",
+      "B": "AWS Identity and Access Management (IAM)",
+      "C": "Amazon Macie",
+      "D": "AWS Shield"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "---PAGE--- With AWS Identity and Access Management (IAM) all actions are denied by default. When granting permissions, access should be provided only on a need -to-have basis. What is this concept called?",
+    "options": {
+      "A": "Default deny policy",
+      "B": "Role -based access control",
+      "C": "Permission boundary framework",
+      "D": "Principle of least privilege"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "Which AWS service provides continuous evaluation and checks of your AWS resources, and provides suggestions to optimize costs, performance, security, and resilience?",
+    "options": {
+      "A": "AWS Artifact",
+      "B": "AWS CloudTrail",
+      "C": "AWS Trusted Advisor",
+      "D": "Amazon CloudWatch"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  },
+  {
+    "question": "A financial company is looking for a solution to govern a curated set of AWS resources for their employees. When the employees need to select and start up a new AWS resource, they want to provide a self -service way to create, share, and deploy the AWS reso urces. Which AWS service would best meet their needs?",
+    "options": {
+      "A": "AWS Artifact",
+      "B": "AWS License Manager",
+      "C": "AWS Service Catalog",
+      "D": "AWS Health"
+    },
+    "correct_answers": [
+      "A"
+    ]
+  }
+]
